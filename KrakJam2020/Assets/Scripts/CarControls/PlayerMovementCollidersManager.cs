@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
 
 public class PlayerMovementCollidersManager : MonoBehaviour {
-    [SerializeField] private Transform playerCollidersHolder;
+    [SerializeField] Transform playerCollidersHolder;
     
-    [SerializeField] private GameObject verticalColliderPrefab;
-    [SerializeField] private GameObject horizontalColliderPrefab;
+    [SerializeField] GameObject verticalColliderPrefab;
+    [SerializeField] GameObject horizontalColliderPrefab;
 
-    [SerializeField] private float verticalColliderXOffset;
-    [SerializeField] private float horizontalColliderYOffset;
+    [SerializeField] float verticalColliderXOffset;
+    [SerializeField] float horizontalColliderYOffset;
 
-    [SerializeField] private float gizmosSpheresRadius;
+    [SerializeField] float gizmosSpheresRadius;
 
-    private void Start(){
+    void Start(){
         SpawnColliders();
     }
 
-    private void SpawnColliders() {
+    void SpawnColliders() {
         var position = transform.position;
         //spawn vertical colliders
         Instantiate(verticalColliderPrefab, new Vector2(verticalColliderXOffset, position.y),
@@ -30,7 +30,7 @@ public class PlayerMovementCollidersManager : MonoBehaviour {
             Quaternion.identity, playerCollidersHolder);
     }
 
-    private void OnDrawGizmos() {
+    void OnDrawGizmos() {
         var position = transform.position;
         Gizmos.DrawWireSphere(new Vector2(verticalColliderXOffset, position.y),gizmosSpheresRadius);
         Gizmos.DrawWireSphere(new Vector2(-verticalColliderXOffset, position.y),gizmosSpheresRadius);
