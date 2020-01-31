@@ -8,18 +8,16 @@ using UnityEngine;
 namespace highScore{
 	public class HighScore : MonoBehaviour{
 		
-		[ShowInInspector]
-		private List<HighScoreEntry> _highScoreEntries = new List<HighScoreEntry>();
-		[ShowInInspector] 
-		private string _highScoreFilePath = "../HighScores.json";
+		[ShowInInspector] List<HighScoreEntry> _highScoreEntries = new List<HighScoreEntry>();
+		[ShowInInspector] string _highScoreFilePath = "../HighScores.json";
 
-		private HighScoreEntry _highScoreEntry;
+		HighScoreEntry _highScoreEntry;
 
-		private void Start(){
+		void Start(){
 			LoadHighScoresFromFile();
 		}
 
-		private void OnDestroy(){
+		void OnDestroy(){
 			SaveHighScoresToFile();
 		}
 
@@ -49,30 +47,30 @@ namespace highScore{
 		}
 		
 		[Button]
-		private void SaveHighScoresToFile(){
+		void SaveHighScoresToFile(){
 			var bytes = SerializationUtility.SerializeValue(_highScoreEntries, DataFormat.JSON);
 			File.WriteAllBytes(_highScoreFilePath, bytes);
 		}
 		
 		[Button]
-		private void LoadHighScoresFromFile(){
+		void LoadHighScoresFromFile(){
 			var bytes = File.ReadAllBytes(_highScoreFilePath);
 			_highScoreEntries = SerializationUtility
 				.DeserializeValue<List<HighScoreEntry>>(bytes, DataFormat.JSON);
 		}
 
 		[Button]
-		private void ClearHighScores(){
+		void ClearHighScores(){
 			_highScoreEntries.Clear();
 		}
 
 		[Button]
-		private void RemoveHighScoreFile(){
+		void RemoveHighScoreFile(){
 			File.Delete(_highScoreFilePath);
 		}
 
 		[Button]
-		private void AddTestHighScoreEntry(){
+		void AddTestHighScoreEntry(){
 			Debug.Log("Added new Score");
 			var entry = new HighScoreEntry{
 				PlayerName = "PlayerName",
@@ -84,7 +82,7 @@ namespace highScore{
 		}
 
 		[Button]
-		private void TestEntriesSort(){
+		void TestEntriesSort(){
 			var sortedList = GetEntriesSortedByScore();
 			foreach(var entry in sortedList){
 				Debug.Log(entry.Score);

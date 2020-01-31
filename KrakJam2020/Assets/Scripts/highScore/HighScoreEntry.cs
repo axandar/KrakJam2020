@@ -5,14 +5,10 @@ using UnityEngine;
 namespace highScore{
 	[Serializable]
 	public class HighScoreEntry{
-		[SerializeField]
-		private string playerName;
-		[SerializeField]
-		private int score;
-		[SerializeField]
-		private int millisecondsOnPlayStart;
-		[SerializeField]
-		private int millisecondsOnPlayEnd;
+		[SerializeField] string playerName;
+		[SerializeField] int score;
+		[SerializeField] int millisecondsOnPlayStart;
+		[SerializeField] int millisecondsOnPlayEnd;
 		public HighScoreEntry(){}
 
 		public string PlayerName{
