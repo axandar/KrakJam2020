@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class TruckColorPicker : MonoBehaviour
-{
+public class TruckColorPicker : MonoBehaviour {
+    bool isPies = true;
     public enum TruckColor {
         Cyan,
         Red,
         Yellow
     }
+
     public TruckColor color = TruckColor.Cyan;
-    public Material cyanMaterial,redMaterial,yellowMaterial;
+    public Material cyanMaterial, redMaterial, yellowMaterial;
+
+    [Button("ClickMe")]
+    void BamboozleButton() {
+        Debug.Log("Debil");
+    }
 
     void Awake() {
         switch (color) {
