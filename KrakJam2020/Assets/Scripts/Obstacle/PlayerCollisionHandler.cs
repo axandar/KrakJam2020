@@ -3,19 +3,20 @@ using UnityEngine;
 
 namespace Obstacle{
 	public class PlayerCollisionHandler : MonoBehaviour {
-		[SerializeField] private float shakeDurationEffect;
+		[SerializeField] private float forceOnCollisionWithObstacle;
 		
 		private ObjectShakerScript _objectShakerScript;
+		private Rigidbody _rigidbody;
 
 		private void Start(){
+			_rigidbody = GetComponent<Rigidbody>();
 			_objectShakerScript = GameObject.FindGameObjectWithTag(Tags.CAMERA_TO_SHAKE)
 				.GetComponent<ObjectShakerScript>();
 		}
 
 		public void CrashedIntoObstacle(){
-			//todo add force
+			_rigidbody.AddForce(Vector3.right * forceOnCollisionWithObstacle,ForceMode.Impulse);
 			_objectShakerScript.Shake();
-			Debug.Log("Can add force");
 		}
 	}
 }

@@ -1,7 +1,7 @@
 {
     "$id": 0,
     "$type": "0|System.Collections.Generic.List`1[[highScore.HighScoreEntry, Assembly-CSharp]], mscorlib",
-    "$rlength": 25,
+    "$rlength": 37,
     "$rcontent": [
         {
             "$id": 1,
@@ -202,6 +202,102 @@
             "score": 45,
             "millisecondsOnPlayStart": 1580590812621,
             "millisecondsOnPlayEnd": 1580590823997
+        },
+        {
+            "$id": 26,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 45,
+            "millisecondsOnPlayStart": 1580592087762,
+            "millisecondsOnPlayEnd": 1580592096537
+        },
+        {
+            "$id": 27,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 300,
+            "millisecondsOnPlayStart": 1580592109373,
+            "millisecondsOnPlayEnd": 1580592182170
+        },
+        {
+            "$id": 28,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 240,
+            "millisecondsOnPlayStart": 1580592200279,
+            "millisecondsOnPlayEnd": 1580592235232
+        },
+        {
+            "$id": 29,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 75,
+            "millisecondsOnPlayStart": 1580592279260,
+            "millisecondsOnPlayEnd": 1580592306974
+        },
+        {
+            "$id": 30,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 105,
+            "millisecondsOnPlayStart": 1580592315899,
+            "millisecondsOnPlayEnd": 1580592336750
+        },
+        {
+            "$id": 31,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 165,
+            "millisecondsOnPlayStart": 1580592456474,
+            "millisecondsOnPlayEnd": 1580592479727
+        },
+        {
+            "$id": 32,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 120,
+            "millisecondsOnPlayStart": 1580592557551,
+            "millisecondsOnPlayEnd": 1580592569364
+        },
+        {
+            "$id": 33,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 15,
+            "millisecondsOnPlayStart": 1580592607366,
+            "millisecondsOnPlayEnd": 1580592611743
+        },
+        {
+            "$id": 34,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 15,
+            "millisecondsOnPlayStart": 1580592644483,
+            "millisecondsOnPlayEnd": 1580592653075
+        },
+        {
+            "$id": 35,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 15,
+            "millisecondsOnPlayStart": 1580592761047,
+            "millisecondsOnPlayEnd": 1580592765078
+        },
+        {
+            "$id": 36,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 255,
+            "millisecondsOnPlayStart": 1580592777935,
+            "millisecondsOnPlayEnd": 1580592804500
+        },
+        {
+            "$id": 37,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 165,
+            "millisecondsOnPlayStart": 1580592816397,
+            "millisecondsOnPlayEnd": 1580592845611
         }
     ]
 }
