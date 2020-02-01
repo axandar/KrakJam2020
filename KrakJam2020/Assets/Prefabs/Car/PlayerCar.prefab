@@ -104,7 +104,10 @@ GameObject:
   - component: {fileID: 6239651303488311111}
   - component: {fileID: 6239651303488311128}
   - component: {fileID: 6239651303488311129}
+  - component: {fileID: 1096325431}
   - component: {fileID: 1934176649777847905}
+  - component: {fileID: 2038605759304272191}
+  - component: {fileID: 6710353804826644173}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Untagged
@@ -142,7 +145,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!114 &6239651303488311129
 MonoBehaviour:
@@ -159,7 +162,55 @@ MonoBehaviour:
   playerAccelerationSpeed: 10
   maxPlayerHorizontalVelocity: 5
   playerTurningRotationMaxValue: 60
+  playerTurningEventInvokeAngleThreshold: 30
+--- !u!114 &1096325431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239651303488311130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083089c53bdb3164bbeb2636f8ede185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTypes:
+  - collidedGameObjectTag: Obstacle
+    collisionHpEffect: -1
+    collisionPoints: -10
+    collisionSound: {fileID: 8300000, guid: 7904fc174a1a628449b89659fec7fb96, type: 3}
+    collisionParticleEffect: {fileID: 6236531153113935268, guid: 125b3ae7e9ceb6840b3c8b25379218fe,
+      type: 3}
+    collisionParticleEffectDurationTime: 5
+  sameObjectCollisionIgnoreTime: 1.2
 --- !u!65 &1934176649777847905
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239651303488311130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2038605759304272191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239651303488311130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6710353804826644173
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
