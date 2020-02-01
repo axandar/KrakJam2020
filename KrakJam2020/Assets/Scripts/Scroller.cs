@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CameraScroller : MonoBehaviour {
+public class Scroller : MonoBehaviour {
 	[SerializeField] float scrollSpeed;
 
 	void Update() {
