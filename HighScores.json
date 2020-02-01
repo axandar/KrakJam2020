@@ -2,9 +2,13 @@
     "$id": 0,
     "$type": "0|System.Collections.Generic.List`1[[highScore.HighScoreEntry, Assembly-CSharp]], mscorlib",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "$rlength": 11,
 =======
     "$rlength": 25,
+>>>>>>> develop
+=======
+    "$rlength": 30,
 >>>>>>> develop
     "$rcontent": [
         {
@@ -238,6 +242,49 @@
             "score": 45,
             "millisecondsOnPlayStart": 1580590812621,
             "millisecondsOnPlayEnd": 1580590823997
+<<<<<<< HEAD
+>>>>>>> develop
+=======
+        },
+        {
+            "$id": 26,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580593418374,
+            "millisecondsOnPlayEnd": 1580593421372
+        },
+        {
+            "$id": 27,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580593430946,
+            "millisecondsOnPlayEnd": 1580593435573
+        },
+        {
+            "$id": 28,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580593483626,
+            "millisecondsOnPlayEnd": 1580593486577
+        },
+        {
+            "$id": 29,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580593953806,
+            "millisecondsOnPlayEnd": 1580593955642
+        },
+        {
+            "$id": 30,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 30,
+            "millisecondsOnPlayStart": 1580593966914,
+            "millisecondsOnPlayEnd": 1580593974629
 >>>>>>> develop
         }
     ]
