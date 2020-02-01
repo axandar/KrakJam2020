@@ -1,59 +1,40 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using highScore;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerCarCollisionsLogic : MonoBehaviour {
-
-	[SerializeField] CollisionTypeSettings[] collisionTypes;
-	[SerializeField] float sameObjectCollisionIgnoreTime;
+	public UnityEvent<Obstacle> obstacleCollidedEvent;
 	
-	private List<string> _currentlyIgnoredTagsList = new List<string>();
-	HighScore _highScoreManager;
+	[SerializeField] float obstacleTypeCollisionIgnoreTime;
 
-	void Start() {
-		_highScoreManager = GameObject.FindWithTag(Tags.HIGH_SCORE).GetComponent<HighScore>();
-	}
+	List<Obstacle.ObstacleType> _currentlyIgnoredObstacleTypes;
 
 	void OnTriggerEnter(Collider other) {
-		foreach (var collisionType in collisionTypes) {
-			var otherTag = other.gameObject.tag;
-			if (otherTag.Equals(collisionType.collidedGameObjectTag) &&
-			    !_currentlyIgnoredTagsList.Contains(otherTag)) {
-				ReactToCollision(other, collisionType);
-				return;
-			}
-		}
+		var obstacleScript = other.GetComponent<Obstacle>();
+		if (obstacleScript == null) {return;}
+		var collidedObstacleType = obstacleScript.obstacleType;
+		if(_currentlyIgnoredObstacleTypes.Contains(collidedObstacleType)) { return; }
+		
+		obstacleCollidedEvent.Invoke(obstacleScript);
+		obstacleScript.ObstacleCollidedWithPlayer();
+		ReactToObstacleCollision(other, collidedObstacleType );
+		StartCoroutine(TempIgnoreObstacleType(collidedObstacleType, obstacleTypeCollisionIgnoreTime));
 	}
 
-	void ReactToCollision(Collider other, CollisionTypeSettings collisionTypeSettings) {
-		_highScoreManager.AddScore(collisionTypeSettings.collisionPoints);
-		AudioSource.PlayClipAtPoint(collisionTypeSettings.collisionSound, transform.position);
-		var collisionParticleEffect = Instantiate(collisionTypeSettings.collisionParticleEffect,
-			other.transform.position, Quaternion.identity);
-		Destroy(collisionParticleEffect, collisionTypeSettings.collisionParticleEffectDurationTime);
+	void ReactToObstacleCollision(Collider other, Obstacle.ObstacleType obstacleType) {
+		switch (obstacleType) {
+			default:
+				throw new ArgumentNullException(obstacleType.ToString(),"obstacleType not recognized!");
+		}
 		//TODO: add car behaviour
-		//TODO: updateHP
-		
-		StartCoroutine(LockTagFromInvokingCollisionEffects(collisionTypeSettings.collidedGameObjectTag,
-			sameObjectCollisionIgnoreTime));
 	}
-	
-	IEnumerator LockTagFromInvokingCollisionEffects(string ignoredTag, float lockTime) {
-		_currentlyIgnoredTagsList.Add(ignoredTag);
-		yield return new WaitForSeconds(lockTime);
-		_currentlyIgnoredTagsList.Remove(ignoredTag);
-	}
-	
-	[Serializable]
-	private class CollisionTypeSettings {
-		[SerializeField] public string collidedGameObjectTag;
-		[SerializeField] public int collisionHpEffect;
-		[SerializeField] public int collisionPoints;
-		[SerializeField] public AudioClip collisionSound;
-		[SerializeField] public GameObject collisionParticleEffect;
-		[SerializeField] public float collisionParticleEffectDurationTime;
+
+	IEnumerator TempIgnoreObstacleType(Obstacle.ObstacleType ignoredObstacleType, float obstacleTypeIgnoreTime) {
+		_currentlyIgnoredObstacleTypes.Add(ignoredObstacleType);
+		yield return new WaitForSeconds(obstacleTypeIgnoreTime);
+		_currentlyIgnoredObstacleTypes.Remove(ignoredObstacleType);
 	}
 }
 
