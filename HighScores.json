@@ -1,7 +1,7 @@
 {
     "$id": 0,
     "$type": "0|System.Collections.Generic.List`1[[highScore.HighScoreEntry, Assembly-CSharp]], mscorlib",
-    "$rlength": 28,
+    "$rlength": 30,
     "$rcontent": [
         {
             "$id": 1,
@@ -226,6 +226,22 @@
             "score": 0,
             "millisecondsOnPlayStart": 1580593483626,
             "millisecondsOnPlayEnd": 1580593486577
+        },
+        {
+            "$id": 29,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580593953806,
+            "millisecondsOnPlayEnd": 1580593955642
+        },
+        {
+            "$id": 30,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 30,
+            "millisecondsOnPlayStart": 1580593966914,
+            "millisecondsOnPlayEnd": 1580593974629
         }
     ]
 }
