@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84372d42adc00b43896102dbd5285d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: 0
   cyanMaterial: {fileID: 2100000, guid: 1db4f2a4d420b2a46aaa1bc7401dd3b0, type: 2}
   redMaterial: {fileID: 2100000, guid: 59bd63938c2bbcb4988a80063b1354bf, type: 2}
   yellowMaterial: {fileID: 2100000, guid: 36bc87546b66a5745900977ba4e5737e, type: 2}
