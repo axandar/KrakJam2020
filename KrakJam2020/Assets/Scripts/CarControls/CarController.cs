@@ -8,6 +8,9 @@ public class CarController : MonoBehaviour {
 	[SerializeField] float playerAccelerationSpeed;
 	[SerializeField] float maxPlayerHorizontalVelocity;
 	[SerializeField] float playerTurningRotationMaxValue;
+	[SerializeField] float playerTurningEventInvokeAngleThreshold;
+
+	bool _playerTurningEventInvoked;
 	
 	float _playerRotationAngle;
 	Vector3 _playerInput;
@@ -28,12 +31,24 @@ public class CarController : MonoBehaviour {
 	void FixedUpdate() {
 		ApplyPlayerInputToRb();
 		CalculateCarRotationAngle();
+		ManagePlayerTurningEvents();
 		ApplyCarRotationAngle();
 	}
 
 	void ApplyPlayerInputToRb() {
 		_rigidbody.AddForce(_playerInput * (playerAccelerationSpeed * Time.fixedDeltaTime), ForceMode.Impulse);
 		ClampPlayerVelocity();
+	}
+
+	private void ManagePlayerTurningEvents() {
+		if (_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) < playerTurningEventInvokeAngleThreshold) {
+			playerTurningEffectsStoppedEvent.Invoke();
+			_playerTurningEventInvoked = false;
+		}
+		else if(!_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) > playerTurningEventInvokeAngleThreshold) {
+			playerTurningEffectsStartedEvent.Invoke();
+			_playerTurningEventInvoked = true;
+		}
 	}
 
 	void ClampPlayerVelocity() {
