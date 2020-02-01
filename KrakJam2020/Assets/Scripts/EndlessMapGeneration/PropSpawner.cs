@@ -26,7 +26,7 @@ namespace EndlessMapGeneration{
 			var prop = Instantiate(propToSpawn, randomPosition, propToSpawn.transform.rotation);
 			prop.highScore = highScore;
 			prop.healthPointsSystem = healthPointsSystem;
-
+			
 			Destroy(prop, 10f);
 		}
 

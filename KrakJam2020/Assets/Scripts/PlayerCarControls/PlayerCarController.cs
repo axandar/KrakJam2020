@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class CarController : MonoBehaviour {
+public class PlayerCarController : MonoBehaviour {
 	public Action playerTurningEffectsStartedEvent;
 	public Action playerTurningEffectsStoppedEvent;
 	
