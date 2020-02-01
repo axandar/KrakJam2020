@@ -34,7 +34,7 @@ public class PlayerMovementCollidersManager : MonoBehaviour {
         var position = transform.position;
         Gizmos.DrawWireSphere(new Vector3(0f, position.y, verticalColliderZOffset),gizmosSpheresRadius);
         Gizmos.DrawWireSphere(new Vector3(0f, position.y, -verticalColliderZOffset), gizmosSpheresRadius);
-        Gizmos.DrawWireSphere(new Vector3(0f, horizontalColliderYOffset, position.z),gizmosSpheresRadius);
-        Gizmos.DrawWireSphere(new Vector3(0f, -horizontalColliderYOffset, position.z),gizmosSpheresRadius);
+        Gizmos.DrawWireSphere(new Vector3(0f, position.y + horizontalColliderYOffset, position.z),gizmosSpheresRadius);
+        Gizmos.DrawWireSphere(new Vector3(0f, position.y + -horizontalColliderYOffset, position.z),gizmosSpheresRadius);
     }
 }
