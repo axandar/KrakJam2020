@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Glow
+  m_Name: Shader Graphs_GlowYellow
   m_Shader: {fileID: -6465566751694194690, guid: 86999a98b47d15a438226eff45e2dcff,
     type: 3}
   m_ShaderKeywords: 
@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_6C394237:
+        m_Texture: {fileID: 2800000, guid: 1c632a61bb43b8b4c94a1824d504086e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_F407EB39_Texture_1:
         m_Texture: {fileID: 2800000, guid: 6e04443d7d10de449bf24cf1d40f4dac, type: 3}
         m_Scale: {x: 1, y: 1}
