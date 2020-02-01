@@ -48,6 +48,6 @@ MonoBehaviour:
     type: 3}
   horizontalColliderPrefab: {fileID: 603680513877022190, guid: f1ab6ee16c398204a9ab34a0c6d52799,
     type: 3}
-  verticalColliderZOffset: 4
-  horizontalColliderYOffset: 3.6
+  verticalColliderZOffset: 9
+  horizontalColliderXOffset: 8
   gizmosSpheresRadius: 1

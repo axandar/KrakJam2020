@@ -25,7 +25,7 @@ public class CarController : MonoBehaviour {
 	}
 
 	void ReadPlayerInput() {
-		_playerInput = new Vector3(0f, Input.GetAxisRaw("Vertical"),Input.GetAxisRaw("Horizontal"));
+		_playerInput = new Vector3(-Input.GetAxisRaw("Vertical"), 0f ,Input.GetAxisRaw("Horizontal"));
 	}
 
 	void FixedUpdate() {
@@ -54,9 +54,9 @@ public class CarController : MonoBehaviour {
 	void ClampPlayerVelocity() {
 		var playerHorizontalVelocity = _rigidbody.velocity.z;
 		if (playerHorizontalVelocity > maxPlayerHorizontalVelocity) {
-			_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y,maxPlayerHorizontalVelocity);
+			_rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0f,maxPlayerHorizontalVelocity);
 		}else if (playerHorizontalVelocity < -maxPlayerHorizontalVelocity) {
-			_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y,-maxPlayerHorizontalVelocity);
+			_rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0f ,-maxPlayerHorizontalVelocity);
 		}
 	}
 	  
@@ -75,6 +75,6 @@ public class CarController : MonoBehaviour {
 
 	void ApplyCarRotationAngle() {
 		var currentRbRotation = _rigidbody.rotation.eulerAngles;
-		_rigidbody.rotation = Quaternion.Euler(_playerRotationAngle, currentRbRotation.y, currentRbRotation.z);
+		_rigidbody.rotation = Quaternion.Euler(currentRbRotation.x,_playerRotationAngle , currentRbRotation.z);
 	}
 }

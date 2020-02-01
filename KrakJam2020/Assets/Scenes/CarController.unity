@@ -335,6 +335,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da8ea11296a16b840b559e6b7500ac09, type: 3}
+--- !u!1 &1444564505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423325142311933941, guid: da8ea11296a16b840b559e6b7500ac09,
+    type: 3}
+  m_PrefabInstance: {fileID: 668182394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1444564506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444564505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c13f15172d4571a99a070818733fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpEffect: 0
+  score: 0
+  obstacleType: 0
+  collisionSound: {fileID: 0}
+  collisionParticleEffect: {fileID: 0}
+  collisionParticleEffectLifetime: 0
 --- !u!1 &1456187144
 GameObject:
   m_ObjectHideFlags: 0

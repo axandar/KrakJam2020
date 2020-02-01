@@ -7,7 +7,7 @@ public class PlayerMovementCollidersManager : MonoBehaviour {
     [SerializeField] GameObject horizontalColliderPrefab;
 
     [SerializeField] float verticalColliderZOffset;
-    [SerializeField] float horizontalColliderYOffset;
+    [SerializeField] float horizontalColliderXOffset;
 
     [SerializeField] float gizmosSpheresRadius;
 
@@ -18,23 +18,23 @@ public class PlayerMovementCollidersManager : MonoBehaviour {
     void SpawnColliders() {
         var position = transform.position;
         //spawn vertical colliders
-        Instantiate(verticalColliderPrefab, new Vector3(0f, position.y, verticalColliderZOffset),
-            Quaternion.identity, playerCollidersHolder);
-        Instantiate(verticalColliderPrefab, new Vector3(0f, position.y, -verticalColliderZOffset),
-            Quaternion.identity, playerCollidersHolder);
+        Instantiate(verticalColliderPrefab, new Vector3(position.x, 0f, verticalColliderZOffset),
+            verticalColliderPrefab.transform.rotation, playerCollidersHolder);
+        Instantiate(verticalColliderPrefab, new Vector3(position.x, 0f, -verticalColliderZOffset),
+            verticalColliderPrefab.transform.rotation, playerCollidersHolder);
         
         //spawn horizontal colliders
-        Instantiate(horizontalColliderPrefab, new Vector3(0f, horizontalColliderYOffset, position.z),
+        Instantiate(horizontalColliderPrefab, new Vector3(horizontalColliderXOffset, 0f, position.z),
             horizontalColliderPrefab.transform.rotation, playerCollidersHolder);
-        Instantiate(horizontalColliderPrefab, new Vector3(0f, -horizontalColliderYOffset, position.z),
+        Instantiate(horizontalColliderPrefab, new Vector3(-horizontalColliderXOffset, 0f, position.z),
             horizontalColliderPrefab.transform.rotation, playerCollidersHolder);
     }
 
     void OnDrawGizmos() {
         var position = transform.position;
-        Gizmos.DrawWireSphere(new Vector3(0f, position.y, verticalColliderZOffset),gizmosSpheresRadius);
-        Gizmos.DrawWireSphere(new Vector3(0f, position.y, -verticalColliderZOffset), gizmosSpheresRadius);
-        Gizmos.DrawWireSphere(new Vector3(0f, horizontalColliderYOffset, position.z),gizmosSpheresRadius);
-        Gizmos.DrawWireSphere(new Vector3(0f, -horizontalColliderYOffset, position.z),gizmosSpheresRadius);
+        Gizmos.DrawWireSphere(new Vector3(position.x, 0f, verticalColliderZOffset),gizmosSpheresRadius);
+        Gizmos.DrawWireSphere(new Vector3(position.x, 0f, -verticalColliderZOffset), gizmosSpheresRadius);
+        Gizmos.DrawWireSphere(new Vector3(position.x + horizontalColliderXOffset, 0f, position.z),gizmosSpheresRadius);
+        Gizmos.DrawWireSphere(new Vector3(position.y - horizontalColliderXOffset, 0f, position.z),gizmosSpheresRadius);
     }
 }
