@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Obstacle;
+using UnityEngine;
 
-public class RoadCar : MonoBehaviour {
+public class RoadCar : RoadObstacle {
 	[SerializeField] float roadMovementSpeed;
 
 	void Update() {

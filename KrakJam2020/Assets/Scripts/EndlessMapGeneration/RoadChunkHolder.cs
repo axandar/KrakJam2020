@@ -9,7 +9,8 @@ namespace EndlessMapGeneration{
 	public class RoadChunkHolder : MonoBehaviour{
 		[SerializeField] private HighScore _highScore;
 		[SerializeField] private HealthPointsSystem _healthPointsSystem;
-		[SerializeField] private List<RoadObstacle> roadObstacles;
+		[SerializeField] private List<RoadObstacle> roadObstaclesOnLeft;
+		[SerializeField] private List<RoadObstacle> roadObstaclesOnRight;
 		[SerializeField] private List<GameObject> housesOnLeft;
 		[SerializeField] private List<GameObject> housesOnRight;
 
@@ -21,8 +22,8 @@ namespace EndlessMapGeneration{
 		[Range(0, 1)] [SerializeField] float chanceToSpawnProp;
 
 		public void SpawnObjectsOnChunk(){
-			SpawnOnSpawner(leftRoadChunk, roadObstacles);
-			SpawnOnSpawner(rightRoadChunk, roadObstacles);
+			SpawnOnSpawner(leftRoadChunk, roadObstaclesOnLeft);
+			SpawnOnSpawner(rightRoadChunk, roadObstaclesOnRight);
 			SpawnOnSpawner(leftHouseChunk, housesOnLeft);
 			SpawnOnSpawner(rightHouseChunk, housesOnRight);
 		}

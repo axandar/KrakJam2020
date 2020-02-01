@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -656,6 +656,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: roadObstaclesOnLeft.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: roadObstaclesOnRight.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: roadObstaclesOnLeft.Array.data[0]
+      value: 
+      objectReference: {fileID: 7676673028485685241, guid: acdf346bfa742ec4190015e1480d97c7,
+        type: 3}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: roadObstaclesOnRight.Array.data[0]
+      value: 
+      objectReference: {fileID: 7676673028485685241, guid: acdf346bfa742ec4190015e1480d97c7,
+        type: 3}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: roadObstaclesOnLeft.Array.data[1]
+      value: 
+      objectReference: {fileID: 1921689966861071987, guid: 7e96d4a68ef11ae4d92eb480508a3237,
+        type: 3}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: roadObstaclesOnRight.Array.data[1]
+      value: 
+      objectReference: {fileID: -3306111616641941175, guid: 1ccc043c05ae6424dbf6311cfb64ea40,
+        type: 3}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: chanceToSpawnProp
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: _highScore
+      value: 
+      objectReference: {fileID: 1398227255}
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: _healthPointsSystem
+      value: 
+      objectReference: {fileID: 1398227256}
     - target: {fileID: 3419283471779919625, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
         type: 3}
       propertyPath: m_LocalPosition.x

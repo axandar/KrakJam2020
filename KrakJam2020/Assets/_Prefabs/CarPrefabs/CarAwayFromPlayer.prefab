@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1387800770915375237}
   - component: {fileID: 4244842088898527198}
   - component: {fileID: 4937471057675709281}
+  - component: {fileID: -3306111616641941175}
   m_Layer: 0
   m_Name: CarAwayFromPlayer
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2408091551839293271}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-3306111616641941175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408091551839293271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f741c7b0cf0a548b2f853f7a84317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadMovementSpeed: 2
