@@ -555,13 +555,37 @@ PrefabInstance:
         type: 3}
       propertyPath: propsList.Array.data[4]
       value: 
-      objectReference: {fileID: 2283029180769901879, guid: 3a2915d68687f054b92df9f8b7a799cd,
+      objectReference: {fileID: 1775277873447025004, guid: 3a2915d68687f054b92df9f8b7a799cd,
         type: 3}
     - target: {fileID: -6041458239150205777, guid: ea201f0ff08ad7e43b00a7ecb68d2ee5,
         type: 3}
       propertyPath: propsList.Array.data[5]
       value: 
-      objectReference: {fileID: 3494560000924391267, guid: c6bceeada0df99147a1d9a7429ee3619,
+      objectReference: {fileID: 36973326564753824, guid: c6bceeada0df99147a1d9a7429ee3619,
+        type: 3}
+    - target: {fileID: -6041458239150205777, guid: ea201f0ff08ad7e43b00a7ecb68d2ee5,
+        type: 3}
+      propertyPath: propsList.Array.data[0]
+      value: 
+      objectReference: {fileID: 552731294767185330, guid: d1300d4ec595a794e87214184e0f6c1a,
+        type: 3}
+    - target: {fileID: -6041458239150205777, guid: ea201f0ff08ad7e43b00a7ecb68d2ee5,
+        type: 3}
+      propertyPath: propsList.Array.data[1]
+      value: 
+      objectReference: {fileID: 4671535639881914868, guid: 8421e538f69245047a7a8e3c3af37963,
+        type: 3}
+    - target: {fileID: -6041458239150205777, guid: ea201f0ff08ad7e43b00a7ecb68d2ee5,
+        type: 3}
+      propertyPath: propsList.Array.data[2]
+      value: 
+      objectReference: {fileID: 2364588482417662606, guid: 1423927c3d8dbf0499983d8e4cb5319f,
+        type: 3}
+    - target: {fileID: -6041458239150205777, guid: ea201f0ff08ad7e43b00a7ecb68d2ee5,
+        type: 3}
+      propertyPath: propsList.Array.data[3]
+      value: 
+      objectReference: {fileID: 404527578687477829, guid: 03559f9bbf429dd47a68f18d2e3ecbdc,
         type: 3}
     - target: {fileID: 8588219169659333284, guid: ea201f0ff08ad7e43b00a7ecb68d2ee5,
         type: 3}
