@@ -9,14 +9,20 @@ namespace concreteMechanic{
 		private void Awake(){
 			var localTransform = transform;
 			var backwardTransform = localTransform.parent.forward * -1;
-			localTransform.forward = backwardTransform;
+			localTransform.position = backwardTransform;
 			
 			var boxCollider = GetComponent<BoxCollider>();
 			boxCollider.isTrigger = true;
+			gameObject.SetActive(false);
 		}
 
-		private void OnCollisionEnter(Collision other){
-			other
+		private void OnTriggerEnter(Collider other){
+			var isSplashable = other.gameObject.CompareTag(Tags.CAN_BE_SPLASHED_BY_CONCRETE);
+			if(isSplashable){
+				var splashableByConcrete = other.gameObject.GetComponent<SplashableByConcrete>();
+				splashableByConcrete.SplashByConcrete();
+				Debug.Log("Splashed Game Object!");
+			}
 		}
 	}
 }
