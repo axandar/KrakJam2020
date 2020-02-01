@@ -17,6 +17,21 @@ public class GenerateRoad : MonoBehaviour{
         SpawnRoadTile();
         SpawnRoadTile();
         SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
     }
 
     // private void Update(){

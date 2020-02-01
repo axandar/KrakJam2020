@@ -25,7 +25,7 @@ public class SpawnProps : MonoBehaviour
 		
 		var propToSpawn = GetRandomProp();
 		//var randomPosition = GetRandomPosition();
-		Instantiate(propToSpawn, gameObject.transform.position, Quaternion.identity, transform);
+		var prop = Instantiate(propToSpawn, gameObject.transform.position, Quaternion.identity);
 	}
 
 	private GameObject GetRandomProp(){
