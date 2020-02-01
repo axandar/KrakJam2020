@@ -1,13 +1,18 @@
-﻿using UnityEngine;
+﻿using EndlessMapGeneration;
+using healthPointSystem;
+using highScore;
+using UnityEngine;
 
 
 public class GenerateRoad : MonoBehaviour{
-    [SerializeField] GameObject roadPrefab;
+    [SerializeField] RoadChunkHolder roadPrefab;
     [SerializeField] Transform roadsHolder;
     [SerializeField] Transform startingTile;
     [SerializeField] Transform playerTransform;
     [SerializeField] float minDistanceToSpawnNextRoadTile;
     [SerializeField] float timeToDestroy;
+    [SerializeField] private HighScore highScore;
+    [SerializeField] private HealthPointsSystem healthPointsSystem;
 
     Vector3 _lastEndPointLocation;
 
@@ -33,6 +38,10 @@ public class GenerateRoad : MonoBehaviour{
 
     Transform SpawnRoadTile(Vector3 spawnLocation){
         var instantiatedObject = Instantiate(roadPrefab, spawnLocation, Quaternion.identity,roadsHolder);
+        instantiatedObject.HighScore = highScore;
+        instantiatedObject.HealthPointsSystem = healthPointsSystem;
+        instantiatedObject.SpawnObjectsOnChunk();
+        
 		Destroy(instantiatedObject,timeToDestroy);
         return instantiatedObject.transform;
     }
