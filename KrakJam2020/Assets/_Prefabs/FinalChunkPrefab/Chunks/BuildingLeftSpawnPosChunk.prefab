@@ -52,4 +52,6 @@ MonoBehaviour:
   - {fileID: 7367878412487712072, guid: c6bceeada0df99147a1d9a7429ee3619, type: 3}
   chanceToSpawnProp: 1
   offsetX: 0
-  offsetY: 0
+  offsetZ: 0
+  spawnBuildings: 1
+  spawningTransform: {fileID: 0}

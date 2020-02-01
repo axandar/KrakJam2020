@@ -12,8 +12,10 @@ public class SpawnProps : MonoBehaviour
 	[Range(0,1)]
 	[SerializeField] private float chanceToSpawnProp;
 	[SerializeField] private float offsetX;
-	[SerializeField] private float offsetY;
+	[SerializeField] private float offsetZ;
 
+	[SerializeField] private float obstaclesOffsetY = 0.5f;
+	
 	private void Awake(){
 		if (propsList.IsNullOrEmpty()){ return; }
 		if (Random.value <= chanceToSpawnProp){
@@ -24,23 +26,24 @@ public class SpawnProps : MonoBehaviour
 	private void SpawnRandomProp(){
 		
 		var propToSpawn = GetRandomProp();
-		//var randomPosition = GetRandomPosition();
-		var prop = Instantiate(propToSpawn, gameObject.transform.position, Quaternion.identity);
+		var randomPosition = GetRandomPosition();
+		var prop = Instantiate(propToSpawn, randomPosition, Quaternion.identity);
+		
 	}
 
 	private GameObject GetRandomProp(){
 		return propsList[Random.Range(0, propsList.Count)];
 	}
 
-	// private Vector3 GetRandomPosition(){
-	// 	var position = transform.position;
-	// 	var posX = position.x + Random.Range(-offsetX, offsetX);
-	// 	var posY = position.y + Random.Range(-offsetY, offsetY);
-	// 	var posZ = position.z;
-	// 	return new Vector3(posX,posY,posZ);
-	// }
+	private Vector3 GetRandomPosition(){
+		var position = transform.position;
+		var posX = position.x + Random.Range(-offsetX, offsetX);
+		var posY = position.y + obstaclesOffsetY;
+		var posZ = position.z + Random.Range(-offsetZ, offsetZ);
+		return new Vector3(posX,posY,posZ);
+	}
 
 	private void OnDrawGizmos(){
-		Gizmos.DrawWireCube(transform.position,new Vector3(offsetX*2,offsetY*2));
+		Gizmos.DrawWireCube(transform.position,new Vector3(offsetX*2,0,offsetZ*2));
 	}
 }
