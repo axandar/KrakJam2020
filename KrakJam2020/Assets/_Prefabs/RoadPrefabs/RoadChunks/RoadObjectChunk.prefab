@@ -115,6 +115,7 @@ MonoBehaviour:
   _healthPointsSystem: {fileID: 0}
   roadObstacles:
   - {fileID: 3523247673035350140, guid: 993d230fe4a017c49bc3086a86d6705f, type: 3}
+  - {fileID: 7676673028485685241, guid: acdf346bfa742ec4190015e1480d97c7, type: 3}
   housesOnLeft:
   - {fileID: 36973326564753824, guid: c6bceeada0df99147a1d9a7429ee3619, type: 3}
   - {fileID: 1775277873447025004, guid: 3a2915d68687f054b92df9f8b7a799cd, type: 3}

@@ -1,7 +1,7 @@
 {
     "$id": 0,
     "$type": "0|System.Collections.Generic.List`1[[highScore.HighScoreEntry, Assembly-CSharp]], mscorlib",
-    "$rlength": 1,
+    "$rlength": 11,
     "$rcontent": [
         {
             "$id": 1,
@@ -10,6 +10,86 @@
             "score": 1000,
             "millisecondsOnPlayStart": 987654321,
             "millisecondsOnPlayEnd": 1987654321
+        },
+        {
+            "$id": 2,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -40,
+            "millisecondsOnPlayStart": 1580596332565,
+            "millisecondsOnPlayEnd": 1580596358458
+        },
+        {
+            "$id": 3,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -20,
+            "millisecondsOnPlayStart": 1580596408715,
+            "millisecondsOnPlayEnd": 1580596425316
+        },
+        {
+            "$id": 4,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -20,
+            "millisecondsOnPlayStart": 1580596466997,
+            "millisecondsOnPlayEnd": 1580596477490
+        },
+        {
+            "$id": 5,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -100,
+            "millisecondsOnPlayStart": 1580596633995,
+            "millisecondsOnPlayEnd": 1580596643335
+        },
+        {
+            "$id": 6,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -20,
+            "millisecondsOnPlayStart": 1580596684212,
+            "millisecondsOnPlayEnd": 1580596690347
+        },
+        {
+            "$id": 7,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580596769962,
+            "millisecondsOnPlayEnd": 1580596777293
+        },
+        {
+            "$id": 8,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -155,
+            "millisecondsOnPlayStart": 1580596827535,
+            "millisecondsOnPlayEnd": 1580596859211
+        },
+        {
+            "$id": 9,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": -40,
+            "millisecondsOnPlayStart": 1580596875135,
+            "millisecondsOnPlayEnd": 1580596978946
+        },
+        {
+            "$id": 10,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 55,
+            "millisecondsOnPlayStart": 1580596989225,
+            "millisecondsOnPlayEnd": 1580597010022
+        },
+        {
+            "$id": 11,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 70,
+            "millisecondsOnPlayStart": 1580597038079,
+            "millisecondsOnPlayEnd": 1580597060825
         }
     ]
 }

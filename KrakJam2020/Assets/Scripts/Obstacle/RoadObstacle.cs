@@ -22,7 +22,6 @@ namespace Obstacle{
 		
 		
 		private void Start(){
-			
 			_audioSource = GetComponent<AudioSource>();
 			_particleSystem = GetComponent<ParticleSystem>();
 		}
