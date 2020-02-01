@@ -10,8 +10,7 @@ public class CarController : MonoBehaviour {
 	[SerializeField] float playerTurningRotationMaxValue;
 	
 	float _playerRotationAngle;
-	Vector2 _playerInput;
-
+	Vector3 _playerInput;
 	Rigidbody _rigidbody;
 
 	void Start() {
@@ -23,14 +22,13 @@ public class CarController : MonoBehaviour {
 	}
 
 	void ReadPlayerInput() {
-		_playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+		_playerInput = new Vector3(0f, Input.GetAxisRaw("Vertical"),Input.GetAxisRaw("Horizontal"));
 	}
 
 	void FixedUpdate() {
 		ApplyPlayerInputToRb();
 		CalculateCarRotationAngle();
 		ApplyCarRotationAngle();
-		Debug.Log(_rigidbody.velocity);
 	}
 
 	void ApplyPlayerInputToRb() {
@@ -39,30 +37,29 @@ public class CarController : MonoBehaviour {
 	}
 
 	void ClampPlayerVelocity() {
-		var playerHorizontalVelocity = _rigidbody.velocity.x;
+		var playerHorizontalVelocity = _rigidbody.velocity.z;
 		if (playerHorizontalVelocity > maxPlayerHorizontalVelocity) {
-			_rigidbody.velocity = new Vector2(maxPlayerHorizontalVelocity, _rigidbody.velocity.y);
+			_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y,maxPlayerHorizontalVelocity);
 		}else if (playerHorizontalVelocity < -maxPlayerHorizontalVelocity) {
-			_rigidbody.velocity = new Vector2(-maxPlayerHorizontalVelocity, _rigidbody.velocity.y);
+			_rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y,-maxPlayerHorizontalVelocity);
 		}
 	}
 	  
 	void CalculateCarRotationAngle() {
-		var playerHorizontalVelocity = _rigidbody.velocity.x;
+		var playerHorizontalVelocity = _rigidbody.velocity.z;
 		if (playerHorizontalVelocity > 0) {
 			_playerRotationAngle = playerHorizontalVelocity
 				.RemapFloatValueToRange(0, maxPlayerHorizontalVelocity,
-					0, -playerTurningRotationMaxValue);
+					0, playerTurningRotationMaxValue);
 		} else if (playerHorizontalVelocity < 0) {
 			_playerRotationAngle = playerHorizontalVelocity
 				.RemapFloatValueToRange(0, -maxPlayerHorizontalVelocity,
-					0, playerTurningRotationMaxValue);
+					0, -playerTurningRotationMaxValue);
 		}
-		
 	}
 
 	void ApplyCarRotationAngle() {
 		var currentRbRotation = _rigidbody.rotation.eulerAngles;
-		_rigidbody.rotation = Quaternion.Euler(currentRbRotation.x, currentRbRotation.y, _playerRotationAngle);
+		_rigidbody.rotation = Quaternion.Euler(_playerRotationAngle, currentRbRotation.y, currentRbRotation.z);
 	}
 }
