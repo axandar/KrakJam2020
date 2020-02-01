@@ -29,7 +29,7 @@ public class SpawnProps : MonoBehaviour
 		var propToSpawn = GetRandomProp();
 		var randomPosition = GetRandomPosition();
 		var prop = Instantiate(propToSpawn, randomPosition, propToSpawn.transform.rotation);
-		Destroy(prop, 5f);
+		Destroy(prop, 10f);
 		
 	}
 

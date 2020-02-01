@@ -18,8 +18,8 @@ RenderSettings:
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 20
-  m_LinearFogEnd: 35
+  m_LinearFogStart: 50
+  m_LinearFogEnd: 80
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -58,10 +58,10 @@ LightmapSettings:
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
-    m_AO: 0
-    m_AOMaxDistance: 1
-    m_CompAOExponent: 1
-    m_CompAOExponentDirect: 0
+    m_AO: 1
+    m_AOMaxDistance: 5
+    m_CompAOExponent: 4
+    m_CompAOExponentDirect: 4
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGlobal: 1
-  priority: 0
+  priority: 1
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: be13cbe0ec4116041ad1cc3979951cdd, type: 2}
@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 2127588733937832179, guid: 95b4f9b973770df40ba1f109b31db4d0,
         type: 3}
       propertyPath: minDistanceToSpawnNextRoadTile
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2127588733937832179, guid: 95b4f9b973770df40ba1f109b31db4d0,
         type: 3}
@@ -565,8 +565,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398227253}
-  m_LocalRotation: {x: -0.25060457, y: 0.66120905, z: -0.25060457, w: 0.66120905}
-  m_LocalPosition: {x: 0.10000097, y: -1.538609, z: 12.026281}
+  m_LocalRotation: {x: -0.18540181, y: 0.6823681, z: -0.18540181, w: 0.6823681}
+  m_LocalPosition: {x: 0.10000049, y: -8.48282, z: 11.533938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 104701862}
@@ -704,7 +704,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5372549, g: 0.5058824, b: 0.43529415, a: 1}
+  m_BackGroundColor: {r: 0.49411765, g: 0.49411765, b: 0.49411765, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -744,14 +744,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773280567}
-  m_LocalRotation: {x: 0.25060457, y: -0.66120905, z: 0.25060457, w: 0.66120905}
-  m_LocalPosition: {x: 7.99, y: 9.84, z: -0.1}
+  m_LocalRotation: {x: 0.18540181, y: -0.6823681, z: 0.18540181, w: 0.6823681}
+  m_LocalPosition: {x: 5.66, y: 13.87, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1398227254}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 41.514004, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 30.401001, y: -90.00001, z: 0}
 --- !u!114 &1773280571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,10 +773,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 55
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
