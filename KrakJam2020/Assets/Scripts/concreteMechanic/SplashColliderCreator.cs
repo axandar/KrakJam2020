@@ -6,11 +6,7 @@ namespace concreteMechanic{
 
 	[RequireComponent(typeof(BoxCollider))]
 	public class SplashColliderCreator : MonoBehaviour{
-		private void Awake(){
-			var localTransform = transform;
-			var backwardTransform = localTransform.parent.forward * -1;
-			localTransform.position = backwardTransform;
-			
+		private void Start(){
 			var boxCollider = GetComponent<BoxCollider>();
 			boxCollider.isTrigger = true;
 			gameObject.SetActive(false);
