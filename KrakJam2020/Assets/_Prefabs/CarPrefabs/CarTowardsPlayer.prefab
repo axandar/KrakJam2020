@@ -92,4 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f741c7b0cf0a548b2f853f7a84317c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadMovementSpeed: -2
+  score: 0
+  particleEffectDuration: 0
+  heightOffset: 0
+  highScore: {fileID: 0}
+  healthPointsSystem: {fileID: 0}
+  roadMovementSpeed: -5

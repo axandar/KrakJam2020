@@ -32,7 +32,6 @@ namespace EndlessMapGeneration{
 			if(propList.IsNullOrEmpty()){
 				return;
 			}
-			
 			propSpawner.SpawnRandomProp(propList, _highScore, _healthPointsSystem, chanceToSpawnProp);
 		}
 

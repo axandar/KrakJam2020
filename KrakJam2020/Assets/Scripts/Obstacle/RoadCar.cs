@@ -5,6 +5,6 @@ public class RoadCar : RoadObstacle {
 	[SerializeField] float roadMovementSpeed;
 
 	void Update() {
-		transform.Translate(Vector3.right * roadMovementSpeed, Space.World);
+		transform.Translate(Vector3.left * (roadMovementSpeed * Time.deltaTime), Space.World);
 	}
 }
