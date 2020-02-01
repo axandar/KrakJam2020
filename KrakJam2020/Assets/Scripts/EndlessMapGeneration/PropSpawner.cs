@@ -27,7 +27,7 @@ namespace EndlessMapGeneration{
 			prop.highScore = highScore;
 			prop.healthPointsSystem = healthPointsSystem;
 			
-			Destroy(prop, 10f);
+			Destroy(prop.gameObject, 10f);
 		}
 
 		RoadObstacle GetRandomProp(List<RoadObstacle> propList){
