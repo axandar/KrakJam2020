@@ -20,7 +20,9 @@ namespace Obstacle{
 		private AudioSource _audioSource;
 		private ParticleSystem _particleSystem;
 		
+		
 		private void Start(){
+			
 			_audioSource = GetComponent<AudioSource>();
 			_particleSystem = GetComponent<ParticleSystem>();
 		}
@@ -30,7 +32,7 @@ namespace Obstacle{
 				return;
 			}
 			
-			var playerCollisionHandler = other.gameObject.GetComponent < PlayerCollisionHandler>();
+			var playerCollisionHandler = other.gameObject.GetComponent <PlayerCollisionHandler>();
 			playerCollisionHandler.CrashedIntoObstacle();
 			
 			highScore.AddScore(score);
