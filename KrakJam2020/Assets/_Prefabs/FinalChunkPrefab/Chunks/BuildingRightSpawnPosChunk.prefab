@@ -44,12 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propsList:
-  - {fileID: 562949566960057610, guid: 70c9bb630874b9b478561d536dc0d006, type: 3}
-  - {fileID: 1562662566651764089, guid: b9f67ce075397e94daf9426dcff88065, type: 3}
   - {fileID: 3005840568290804708, guid: 3abb42233a979924ea3aac6832e25079, type: 3}
-  - {fileID: 3004422303913467921, guid: 53a442d7bd2c105459b85c9e6c660515, type: 3}
-  - {fileID: 1840209144389077615, guid: e26009b03de976c4f8fbea4d9aff1caf, type: 3}
-  - {fileID: 3053874964411068553, guid: 2e7cd81545950f54c8f9932084f604bb, type: 3}
   chanceToSpawnProp: 1
   offsetX: 0
   offsetY: 0
