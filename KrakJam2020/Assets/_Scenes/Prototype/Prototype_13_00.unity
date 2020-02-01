@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -669,6 +669,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 784078835026221568, guid: 7726e5da42b1a0a4188a669dea2ec30d,
+        type: 3}
+      propertyPath: m_Time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323003253827127548, guid: 7726e5da42b1a0a4188a669dea2ec30d,
+        type: 3}
+      propertyPath: m_Time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4463496859563599113, guid: 7726e5da42b1a0a4188a669dea2ec30d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,6 +748,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268984533801121150, guid: 7726e5da42b1a0a4188a669dea2ec30d,
+        type: 3}
+      propertyPath: m_Time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901222820739931034, guid: 7726e5da42b1a0a4188a669dea2ec30d,
+        type: 3}
+      propertyPath: m_Time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404962237262919528, guid: 7726e5da42b1a0a4188a669dea2ec30d,
+        type: 3}
+      propertyPath: m_Time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042263289536422105, guid: 7726e5da42b1a0a4188a669dea2ec30d,
+        type: 3}
+      propertyPath: m_Time
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7726e5da42b1a0a4188a669dea2ec30d, type: 3}
