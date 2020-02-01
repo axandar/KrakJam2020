@@ -7,6 +7,7 @@ public class GenerateRoad : MonoBehaviour{
     [SerializeField] private Transform startingTile;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float minDistanceToSpawnNextRoadTile;
+    [SerializeField] private float timeToDestroy;
     
     private Vector3 _lastEndPointLocation;
 
@@ -29,6 +30,7 @@ public class GenerateRoad : MonoBehaviour{
 
     private Transform SpawnRoadTile(Vector3 spawnLocation){
         var instantiatedObject = Instantiate(roadPrefab, spawnLocation, Quaternion.identity,roadsHolder);
+		Destroy(instantiatedObject,timeToDestroy);
         return instantiatedObject.transform;
     }
 
