@@ -7,6 +7,7 @@ TagManager:
   - CanBeSplashedByConcrete
   - Obstacle
   - HighScore
+  - CameraToShake
   layers:
   - Default
   - TransparentFX
