@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 namespace healthPointSystem{
 	public class HealthPointsSystem : MonoBehaviour{
-		[SerializeField] private int maxHp;
-		[SerializeField] private UnityEvent playerDiedEvent;
+		[SerializeField] int maxHp;
+		[SerializeField] UnityEvent playerDiedEvent;
 
-		private void Awake(){
+		void Awake(){
 			maxHp = 5;
 		}
 

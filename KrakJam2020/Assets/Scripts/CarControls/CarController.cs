@@ -40,7 +40,7 @@ public class CarController : MonoBehaviour {
 		ClampPlayerVelocity();
 	}
 
-	private void ManagePlayerTurningEvents() {
+	void ManagePlayerTurningEvents() {
 		if (_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) < playerTurningEventInvokeAngleThreshold) {
 			playerTurningEffectsStoppedEvent?.Invoke();
 			_playerTurningEventInvoked = false;

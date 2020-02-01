@@ -6,9 +6,9 @@ using UnityEngine;
 namespace concreteMechanic{
 	[RequireComponent(typeof(Rigidbody))]
 	public class SplashableByConcrete:MonoBehaviour{
-		[SerializeField] private bool isSplashed;
-		[SerializeField] private int scoreGainedBySplashing;
-		[SerializeField] private HighScore highScore;
+		[SerializeField] bool isSplashed;
+		[SerializeField] int scoreGainedBySplashing;
+		[SerializeField] HighScore highScore;
 
 		public void SplashByConcrete(){
 			if(isSplashed){

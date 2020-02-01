@@ -2,16 +2,16 @@
 
 
 public class GenerateRoad : MonoBehaviour{
-    [SerializeField] private GameObject roadPrefab;
-    [SerializeField] private Transform roadsHolder;
-    [SerializeField] private Transform startingTile;
-    [SerializeField] private Transform playerTransform;
-    [SerializeField] private float minDistanceToSpawnNextRoadTile;
-    [SerializeField] private float timeToDestroy;
-    
-    private Vector3 _lastEndPointLocation;
+    [SerializeField] GameObject roadPrefab;
+    [SerializeField] Transform roadsHolder;
+    [SerializeField] Transform startingTile;
+    [SerializeField] Transform playerTransform;
+    [SerializeField] float minDistanceToSpawnNextRoadTile;
+    [SerializeField] float timeToDestroy;
 
-    private void Awake(){
+    Vector3 _lastEndPointLocation;
+
+    void Awake(){
         _lastEndPointLocation = startingTile.Find("EndPoint").position;
         SpawnRoadTile();
         SpawnRoadTile();
@@ -19,19 +19,19 @@ public class GenerateRoad : MonoBehaviour{
         
     }
 
-    private void Update(){
+    void Update(){
         if (Vector3.Distance(playerTransform.position,_lastEndPointLocation) < minDistanceToSpawnNextRoadTile){
             SpawnRoadTile();
         }
     
     }
 
-    private void SpawnRoadTile(){
+    void SpawnRoadTile(){
         var lastRoadTileTransform = SpawnRoadTile(_lastEndPointLocation);
         _lastEndPointLocation = lastRoadTileTransform.Find("EndPoint").position;
     }
 
-    private Transform SpawnRoadTile(Vector3 spawnLocation){
+    Transform SpawnRoadTile(Vector3 spawnLocation){
         var instantiatedObject = Instantiate(roadPrefab, spawnLocation, Quaternion.identity,roadsHolder);
 		Destroy(instantiatedObject,timeToDestroy);
         return instantiatedObject.transform;

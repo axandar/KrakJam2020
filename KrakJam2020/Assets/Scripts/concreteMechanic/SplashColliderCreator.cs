@@ -6,13 +6,13 @@ namespace concreteMechanic{
 
 	[RequireComponent(typeof(BoxCollider))]
 	public class SplashColliderCreator : MonoBehaviour{
-		private void Start(){
+		void Start(){
 			var boxCollider = GetComponent<BoxCollider>();
 			boxCollider.isTrigger = true;
 			gameObject.SetActive(false);
 		}
 
-		private void OnTriggerEnter(Collider other){
+		void OnTriggerEnter(Collider other){
 			var isSplashable = other.gameObject.CompareTag(Tags.CAN_BE_SPLASHED_BY_CONCRETE);
 			if(isSplashable){
 				var splashableByConcrete = other.gameObject.GetComponent<SplashableByConcrete>();

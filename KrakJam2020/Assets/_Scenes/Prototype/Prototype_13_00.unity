@@ -507,7 +507,12 @@ PrefabInstance:
     - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
       propertyPath: playerAccelerationSpeed
-      value: 50
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningRotationMaxValue
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311130, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
@@ -888,6 +893,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadObjectChunk
       objectReference: {fileID: 0}
+    - target: {fileID: 3638332735005912875, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: chanceToSpawnProp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5593899552668414678, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: chanceToSpawnProp
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
 --- !u!1 &2092838837 stripped
@@ -908,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84372d42adc00b43896102dbd5285d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
+  color: 2
   cyanMaterial: {fileID: 2100000, guid: 1db4f2a4d420b2a46aaa1bc7401dd3b0, type: 2}
   redMaterial: {fileID: 2100000, guid: 59bd63938c2bbcb4988a80063b1354bf, type: 2}
   yellowMaterial: {fileID: 2100000, guid: 36bc87546b66a5745900977ba4e5737e, type: 2}

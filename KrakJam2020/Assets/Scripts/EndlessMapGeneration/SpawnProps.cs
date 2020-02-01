@@ -8,34 +8,36 @@ using Random = UnityEngine.Random;
 
 public class SpawnProps : MonoBehaviour
 {
-	[SerializeField] private List<GameObject> propsList;
+	[SerializeField] List<GameObject> propsList;
 	[Range(0,1)]
-	[SerializeField] private float chanceToSpawnProp;
-	[SerializeField] private float offsetX;
-	[SerializeField] private float offsetZ;
+	[SerializeField]
+	float chanceToSpawnProp;
+	[SerializeField] float offsetX;
+	[SerializeField] float offsetZ;
 
-	[SerializeField] private float obstaclesOffsetY = 0.5f;
-	
-	private void Awake(){
+	[SerializeField] float obstaclesOffsetY = 0.5f;
+
+	void Awake(){
 		if (propsList.IsNullOrEmpty()){ return; }
 		if (Random.value <= chanceToSpawnProp){
 			SpawnRandomProp();
 		}
 	}
 
-	private void SpawnRandomProp(){
+	void SpawnRandomProp(){
 		
 		var propToSpawn = GetRandomProp();
 		var randomPosition = GetRandomPosition();
-		var prop = Instantiate(propToSpawn, randomPosition, Quaternion.identity);
+		var prop = Instantiate(propToSpawn, randomPosition, propToSpawn.transform.rotation);
+		Destroy(prop, 5f);
 		
 	}
 
-	private GameObject GetRandomProp(){
+	GameObject GetRandomProp(){
 		return propsList[Random.Range(0, propsList.Count)];
 	}
 
-	private Vector3 GetRandomPosition(){
+	Vector3 GetRandomPosition(){
 		var position = transform.position;
 		var posX = position.x + Random.Range(-offsetX, offsetX);
 		var posY = position.y + obstaclesOffsetY;
@@ -43,7 +45,7 @@ public class SpawnProps : MonoBehaviour
 		return new Vector3(posX,posY,posZ);
 	}
 
-	private void OnDrawGizmos(){
+	void OnDrawGizmos(){
 		Gizmos.DrawWireCube(transform.position,new Vector3(offsetX*2,0,offsetZ*2));
 	}
 }

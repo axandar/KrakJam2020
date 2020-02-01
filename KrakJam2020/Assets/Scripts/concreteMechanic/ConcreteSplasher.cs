@@ -9,13 +9,13 @@ namespace concreteMechanic{
 	[RequireComponent(typeof(AudioSource))]
 	public class ConcreteSplasher : MonoBehaviour{
 
-		[SerializeField] private SplashColliderCreator splashColliderCreator;
-		[SerializeField] private int splattingTime;
-		[SerializeField] private ParticleSystem particleSystem;
-		
-		private AudioSource _audioSource;
+		[SerializeField] SplashColliderCreator splashColliderCreator;
+		[SerializeField] int splattingTime;
+		[SerializeField] ParticleSystem particleSystem;
 
-		private void Start(){
+		AudioSource _audioSource;
+
+		void Start(){
 			_audioSource = GetComponent<AudioSource>();
 		}
 
@@ -25,13 +25,13 @@ namespace concreteMechanic{
 			StartCoroutine(DisableSplashAfterSeconds());
 		}
 
-		private void InitiateSplash(){
+		void InitiateSplash(){
 			splashColliderCreator.gameObject.SetActive(true);
 			particleSystem.Play();
 			_audioSource.Play();
 		}
 
-		private IEnumerator DisableSplashAfterSeconds(){
+		IEnumerator DisableSplashAfterSeconds(){
 			yield return new WaitForSeconds(splattingTime);
 			splashColliderCreator.gameObject.SetActive(false);
 			particleSystem.Stop();
