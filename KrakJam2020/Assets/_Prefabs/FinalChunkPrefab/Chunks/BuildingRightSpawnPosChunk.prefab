@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propsList:
-  - {fileID: 3005840568290804708, guid: 3abb42233a979924ea3aac6832e25079, type: 3}
+  - {fileID: 1840209144389077615, guid: e26009b03de976c4f8fbea4d9aff1caf, type: 3}
   chanceToSpawnProp: 1
   offsetX: 0
   offsetY: 0
