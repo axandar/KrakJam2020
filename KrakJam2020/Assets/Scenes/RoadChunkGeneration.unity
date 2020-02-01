@@ -450,6 +450,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2903958302568374943, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: propsList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903958302568374943, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: propsList.Array.data[1]
+      value: 
+      objectReference: {fileID: 2085669008573419918, guid: 2e83b444cd8ade040a5e2863b7b85b1b,
+        type: 3}
+    - target: {fileID: 2903958302568374943, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: propsList.Array.data[2]
+      value: 
+      objectReference: {fileID: 2085669008573419918, guid: 2e83b444cd8ade040a5e2863b7b85b1b,
+        type: 3}
+    - target: {fileID: 2903958302568374943, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: propsList.Array.data[3]
+      value: 
+      objectReference: {fileID: 2085669008573419918, guid: 2e83b444cd8ade040a5e2863b7b85b1b,
+        type: 3}
+    - target: {fileID: 2903958302568374943, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: propsList.Array.data[4]
+      value: 
+      objectReference: {fileID: 2085669008573419918, guid: 2e83b444cd8ade040a5e2863b7b85b1b,
+        type: 3}
+    - target: {fileID: 2903958302568374943, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
+        type: 3}
+      propertyPath: propsList.Array.data[5]
+      value: 
+      objectReference: {fileID: 2085669008573419918, guid: 2e83b444cd8ade040a5e2863b7b85b1b,
+        type: 3}
     - target: {fileID: 3419283471779919625, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
         type: 3}
       propertyPath: m_LocalPosition.x
