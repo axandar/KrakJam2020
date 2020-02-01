@@ -22,9 +22,14 @@ public class SpawnProps : MonoBehaviour
 	}
 
 	private void SpawnRandomProp(){
+		Debug.Log("transform before: "+transform.position);
+		Debug.Log("transform local before: "+transform.localPosition);
 		var propToSpawn = GetRandomProp();
 		var randomPosition = GetRandomPosition();
 		Instantiate(propToSpawn, randomPosition, Quaternion.identity, transform);
+		Debug.Log("transform after: "+transform.position);
+		Debug.Log("transform local after: "+transform.localPosition);
+
 	}
 
 	private GameObject GetRandomProp(){
