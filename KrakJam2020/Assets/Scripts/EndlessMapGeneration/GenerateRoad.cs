@@ -14,6 +14,9 @@ public class GenerateRoad : MonoBehaviour{
     private void Awake(){
         _lastEndPointLocation = startingTile.Find("EndPoint").position;
         SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
+        SpawnRoadTile();
     }
 
     // private void Update(){
