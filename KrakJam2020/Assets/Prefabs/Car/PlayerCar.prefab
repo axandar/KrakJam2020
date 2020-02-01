@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2092838841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648859625630979204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84372d42adc00b43896102dbd5285d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  cyanMaterial: {fileID: 2100000, guid: 1db4f2a4d420b2a46aaa1bc7401dd3b0, type: 2}
+  redMaterial: {fileID: 2100000, guid: 59bd63938c2bbcb4988a80063b1354bf, type: 2}
+  yellowMaterial: {fileID: 2100000, guid: 36bc87546b66a5745900977ba4e5737e, type: 2}
 --- !u!1 &6239651303488311130
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,7 +30,6 @@ GameObject:
   - component: {fileID: 1096325431}
   - component: {fileID: 1934176649777847905}
   - component: {fileID: 2038605759304272191}
-  - component: {fileID: 6710353804826644173}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Untagged
@@ -65,9 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b912fde8c3fef4342808d4aa66c79b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAccelerationSpeed: 10
-  maxPlayerHorizontalVelocity: 5
-  playerTurningRotationMaxValue: 60
+  playerAccelerationSpeed: 50
+  maxPlayerHorizontalVelocity: 10
+  playerTurningRotationMaxValue: 75
   playerTurningEventInvokeAngleThreshold: 30
 --- !u!114 &1096325431
 MonoBehaviour:
@@ -107,19 +122,6 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.1, y: 1.1, z: 1.1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6710353804826644173
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6239651303488311130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7180301117313602218
 PrefabInstance:
@@ -172,6 +174,93 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9963204341376125, guid: 7302347eda4af7e4cb1fe04ba404643e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9963204341376125, guid: 7302347eda4af7e4cb1fe04ba404643e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9963204341376125, guid: 7302347eda4af7e4cb1fe04ba404643e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.2465465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.0822189
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.7050014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].time
+      value: 0.57817125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].value
+      value: 0.8378204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].time
+      value: 0.34695584
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].value
+      value: 0.24964768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[0].value
+      value: 0.4825871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[0].time
+      value: 0.0040016174
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[0].value
+      value: 0.26841605
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[1].time
+      value: 0.34794927
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[1].value
+      value: -0.06523889
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[2].time
+      value: 0.9899597
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258502019353307543, guid: 7302347eda4af7e4cb1fe04ba404643e,
+        type: 3}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[2].value
+      value: -0.9813125
+      objectReference: {fileID: 0}
     - target: {fileID: 4045024508274126163, guid: 7302347eda4af7e4cb1fe04ba404643e,
         type: 3}
       propertyPath: m_Name
@@ -182,6 +271,12 @@ PrefabInstance:
 --- !u!4 &7171675271366899415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9963204341376125, guid: 7302347eda4af7e4cb1fe04ba404643e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7180301117313602218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1648859625630979204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8449985200815244846, guid: 7302347eda4af7e4cb1fe04ba404643e,
     type: 3}
   m_PrefabInstance: {fileID: 7180301117313602218}
   m_PrefabAsset: {fileID: 0}
