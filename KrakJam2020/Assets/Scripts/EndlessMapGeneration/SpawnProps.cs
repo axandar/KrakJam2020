@@ -22,26 +22,23 @@ public class SpawnProps : MonoBehaviour
 	}
 
 	private void SpawnRandomProp(){
-		Debug.Log("transform before: "+transform.position);
-		Debug.Log("transform local before: "+transform.localPosition);
+		
 		var propToSpawn = GetRandomProp();
-		var randomPosition = GetRandomPosition();
-		Instantiate(propToSpawn, randomPosition, Quaternion.identity, transform);
-		Debug.Log("transform after: "+transform.position);
-		Debug.Log("transform local after: "+transform.localPosition);
-
+		//var randomPosition = GetRandomPosition();
+		Instantiate(propToSpawn, gameObject.transform.position, Quaternion.identity, transform);
 	}
 
 	private GameObject GetRandomProp(){
 		return propsList[Random.Range(0, propsList.Count)];
 	}
 
-	private Vector3 GetRandomPosition(){
-		var position = transform.position;
-		var posX = position.x + Random.Range(-offsetX, offsetX);
-		var posY = position.y + Random.Range(-offsetY, offsetY);
-		return new Vector3(posX,posY);
-	}
+	// private Vector3 GetRandomPosition(){
+	// 	var position = transform.position;
+	// 	var posX = position.x + Random.Range(-offsetX, offsetX);
+	// 	var posY = position.y + Random.Range(-offsetY, offsetY);
+	// 	var posZ = position.z;
+	// 	return new Vector3(posX,posY,posZ);
+	// }
 
 	private void OnDrawGizmos(){
 		Gizmos.DrawWireCube(transform.position,new Vector3(offsetX*2,offsetY*2));
