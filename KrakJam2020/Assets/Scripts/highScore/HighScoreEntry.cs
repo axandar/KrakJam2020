@@ -7,8 +7,8 @@ namespace highScore{
 	public class HighScoreEntry{
 		[SerializeField] string playerName;
 		[SerializeField] int score;
-		[SerializeField] int millisecondsOnPlayStart;
-		[SerializeField] int millisecondsOnPlayEnd;
+		[SerializeField] long millisecondsOnPlayStart;
+		[SerializeField] long millisecondsOnPlayEnd;
 		public HighScoreEntry(){}
 
 		public string PlayerName{
@@ -21,19 +21,19 @@ namespace highScore{
 			set => score = value;
 		}
 
-		public int MillisecondsOnPlayStart{
+		public long MillisecondsOnPlayStart{
 			get => millisecondsOnPlayStart;
 			set => millisecondsOnPlayStart = value;
 		}
 
-		public int MillisecondsOnPlayEnd{
+		public long MillisecondsOnPlayEnd{
 			get => millisecondsOnPlayEnd;
 			set => millisecondsOnPlayEnd = value;
 		}
 
 		public int TimePlayedInSeconds(){
 			var millisOfPlay = millisecondsOnPlayEnd - millisecondsOnPlayStart;
-			return millisOfPlay / 1000;
+			return (int) (millisOfPlay / 1000);
 		}
 	}
 }
