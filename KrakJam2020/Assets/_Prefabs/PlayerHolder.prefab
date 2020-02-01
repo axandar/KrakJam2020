@@ -183,6 +183,41 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.073413596
       objectReference: {fileID: 0}
+    - target: {fileID: 1934176649777847905, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.918142
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 1.196822e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 1.4590708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2624952
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.13124755
+      objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311111, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -191,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 6239651303488311111, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311111, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
@@ -237,6 +272,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerAccelerationSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: maxPlayerHorizontalVelocity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningRotationMaxValue
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEventInvokeAngleThreshold
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311130, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
