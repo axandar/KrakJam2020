@@ -8,16 +8,20 @@ using UnityEngine;
 namespace highScore{
 	public class HighScore : MonoBehaviour{
 		
-		[ShowInInspector] List<HighScoreEntry> _highScoreEntries = new List<HighScoreEntry>();
+		[ShowInInspector] HighScoreEntry _highScoreEntry;
 		[ShowInInspector] string _highScoreFilePath = "../HighScores.json";
-
-		HighScoreEntry _highScoreEntry;
-
+		[ShowInInspector] List<HighScoreEntry> _highScoreEntries = new List<HighScoreEntry>();
+		
+		DateTime epochStart = new DateTime(1970, 1, 1, 0, 0, 0, 
+			DateTimeKind.Utc);
+		
 		void Start(){
 			LoadHighScoresFromFile();
+			InitializeNewGame("Test player");//TODO powinno byc wywolane przed nowa gra
 		}
 
 		void OnDestroy(){
+			SaveNewScore();//TODO powinno byc wywolywane na koncu gry
 			SaveHighScoresToFile();
 		}
 
@@ -28,7 +32,7 @@ namespace highScore{
 			_highScoreEntry = new HighScoreEntry{
 				PlayerName = playerName,
 				Score = 0,
-				MillisecondsOnPlayStart = DateTime.Now.Millisecond
+				MillisecondsOnPlayStart = (long) (DateTime.UtcNow - epochStart).TotalMilliseconds
 			};
 		}
 
@@ -43,6 +47,7 @@ namespace highScore{
 		 * Saves score to list
 		 */
 		public void SaveNewScore(){
+			_highScoreEntry.MillisecondsOnPlayEnd = (long) (DateTime.UtcNow - epochStart).TotalMilliseconds;
 			_highScoreEntries.Add(_highScoreEntry);
 		}
 		
