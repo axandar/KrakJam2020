@@ -1,23 +1,21 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 
 public class CarController : MonoBehaviour {
 	public Action playerTurningEffectsStartedEvent;
 	public Action playerTurningEffectsStoppedEvent;
 	
-	[SerializeField] float playerMoveSpeed;
-	[SerializeField] float playerRotationChangeSpeed;
+	[SerializeField] float playerAccelerationSpeed;
+	[SerializeField] float maxPlayerHorizontalVelocity;
 	[SerializeField] float playerRotationMaxValue;
 	
 	float _playerRotationAngle;
-
 	Vector2 _playerInput;
 
 	Rigidbody _rigidbody;
-	Transform _cameraTransform;
 
 	void Start() {
-		_cameraTransform = GameObject.FindGameObjectWithTag(Tags.MAIN_CAMERA).transform;
 		_rigidbody = gameObject.GetComponent<Rigidbody>();
 	}
 
@@ -30,34 +28,38 @@ public class CarController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		ApplyPlayerInput();
-		UpdateCarRotationAngle();
+		ApplyPlayerInputToRb();
+		CalculateCarRotationAngle();
 		ApplyCarRotationAngle();
-		Debug.log(_rigi);
+		Debug.Log(_rigidbody.velocity);
 	}
 
-	void ApplyPlayerInput() {
-		_rigidbody.AddForce(_playerInput * (playerMoveSpeed * Time.fixedDeltaTime), ForceMode.Impulse);
+	void ApplyPlayerInputToRb() {
+		_rigidbody.AddForce(_playerInput * (playerAccelerationSpeed * Time.fixedDeltaTime), ForceMode.Impulse);
+		ClampPlayerVelocity();
 	}
-	
-	void UpdateCarRotationAngle(){
-		if (_playerInput.x > 0) {
-			_playerRotationAngle -= Time.fixedDeltaTime * playerRotationChangeSpeed * 3;
-		}else if (_playerInput.x < 0) {
-			_playerRotationAngle += Time.fixedDeltaTime * playerRotationChangeSpeed * 3;
-		} else {
-			_playerRotationAngle = Mathf.MoveTowards(_playerRotationAngle, 0f,
-			 Time.fixedDeltaTime * playerRotationChangeSpeed);
+
+	void ClampPlayerVelocity() {
+		var playerHorizontalVelocity = _rigidbody.velocity.x;
+		if (playerHorizontalVelocity > maxPlayerHorizontalVelocity) {
+			_rigidbody.velocity = new Vector2(maxPlayerHorizontalVelocity, _rigidbody.velocity.y);
+		}else if (playerHorizontalVelocity < -maxPlayerHorizontalVelocity) {
+			_rigidbody.velocity = new Vector2(-maxPlayerHorizontalVelocity, _rigidbody.velocity.y);
 		}
-		ClampCarRotationAngle();
 	}
-	
-	void ClampCarRotationAngle() {
-		if (_playerRotationAngle > playerRotationMaxValue) {
-			_playerRotationAngle = playerRotationMaxValue;
-		} else if (_playerRotationAngle < -playerRotationMaxValue) {
-			_playerRotationAngle = -playerRotationMaxValue;
+	  
+	void CalculateCarRotationAngle() {
+		var playerHorizontalVelocity = _rigidbody.velocity.x;
+		if (playerHorizontalVelocity > 0) {
+			_playerRotationAngle = playerHorizontalVelocity
+				.RemapFloatValueToRange(0, maxPlayerHorizontalVelocity,
+					0, -playerRotationMaxValue);
+		} else if (playerHorizontalVelocity < 0) {
+			_playerRotationAngle = playerHorizontalVelocity
+				.RemapFloatValueToRange(0, -maxPlayerHorizontalVelocity,
+					0, playerRotationMaxValue);
 		}
+		
 	}
 
 	void ApplyCarRotationAngle() {

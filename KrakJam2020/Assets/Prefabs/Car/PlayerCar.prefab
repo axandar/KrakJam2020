@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b912fde8c3fef4342808d4aa66c79b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 15
-  playerRotationChangeSpeed: 20
-  playerRotationMaxValue: 90
+  playerAccelerationSpeed: 10
+  maxPlayerHorizontalVelocity: 5
+  playerRotationMaxValue: 60
 --- !u!65 &1934176649777847905
 BoxCollider:
   m_ObjectHideFlags: 0
