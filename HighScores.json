@@ -1,7 +1,11 @@
 {
     "$id": 0,
     "$type": "0|System.Collections.Generic.List`1[[highScore.HighScoreEntry, Assembly-CSharp]], mscorlib",
+<<<<<<< HEAD
     "$rlength": 11,
+=======
+    "$rlength": 25,
+>>>>>>> develop
     "$rcontent": [
         {
             "$id": 1,
@@ -47,49 +51,194 @@
             "$id": 6,
             "$type": 1,
             "playerName": "Test player",
+<<<<<<< HEAD
             "score": 0,
             "millisecondsOnPlayStart": 1580580574544,
             "millisecondsOnPlayEnd": 1580580635655
+=======
+            "score": 120,
+            "millisecondsOnPlayStart": 1580587791986,
+            "millisecondsOnPlayEnd": 1580587827271
+>>>>>>> develop
         },
         {
             "$id": 7,
             "$type": 1,
             "playerName": "Test player",
             "score": 0,
+<<<<<<< HEAD
             "millisecondsOnPlayStart": 1580591996365,
             "millisecondsOnPlayEnd": 1580592005721
+=======
+            "millisecondsOnPlayStart": 1580588196638,
+            "millisecondsOnPlayEnd": 1580588204677
+>>>>>>> develop
         },
         {
             "$id": 8,
             "$type": 1,
             "playerName": "Test player",
             "score": 0,
+<<<<<<< HEAD
             "millisecondsOnPlayStart": 1580592010101,
             "millisecondsOnPlayEnd": 1580592027248
+=======
+            "millisecondsOnPlayStart": 1580588221724,
+            "millisecondsOnPlayEnd": 1580588233441
+>>>>>>> develop
         },
         {
             "$id": 9,
             "$type": 1,
             "playerName": "Test player",
             "score": 0,
+<<<<<<< HEAD
             "millisecondsOnPlayStart": 1580592031302,
             "millisecondsOnPlayEnd": 1580592039685
+=======
+            "millisecondsOnPlayStart": 1580588251421,
+            "millisecondsOnPlayEnd": 1580588262441
+>>>>>>> develop
         },
         {
             "$id": 10,
             "$type": 1,
             "playerName": "Test player",
+<<<<<<< HEAD
             "score": 0,
             "millisecondsOnPlayStart": 1580592049266,
             "millisecondsOnPlayEnd": 1580592077026
+=======
+            "score": 15,
+            "millisecondsOnPlayStart": 1580588285457,
+            "millisecondsOnPlayEnd": 1580588305523
+>>>>>>> develop
         },
         {
             "$id": 11,
             "$type": 1,
             "playerName": "Test player",
+<<<<<<< HEAD
             "score": -360,
             "millisecondsOnPlayStart": 1580592142524,
             "millisecondsOnPlayEnd": 1580592366831
+=======
+            "score": 60,
+            "millisecondsOnPlayStart": 1580588758111,
+            "millisecondsOnPlayEnd": 1580588776855
+        },
+        {
+            "$id": 12,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 60,
+            "millisecondsOnPlayStart": 1580588802442,
+            "millisecondsOnPlayEnd": 1580588818651
+        },
+        {
+            "$id": 13,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580589540771,
+            "millisecondsOnPlayEnd": 1580589544487
+        },
+        {
+            "$id": 14,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 30,
+            "millisecondsOnPlayStart": 1580589565416,
+            "millisecondsOnPlayEnd": 1580589574059
+        },
+        {
+            "$id": 15,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 120,
+            "millisecondsOnPlayStart": 1580589673244,
+            "millisecondsOnPlayEnd": 1580589700367
+        },
+        {
+            "$id": 16,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 15,
+            "millisecondsOnPlayStart": 1580590070791,
+            "millisecondsOnPlayEnd": 1580590075253
+        },
+        {
+            "$id": 17,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 60,
+            "millisecondsOnPlayStart": 1580590084931,
+            "millisecondsOnPlayEnd": 1580590100439
+        },
+        {
+            "$id": 18,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580590249921,
+            "millisecondsOnPlayEnd": 1580590255796
+        },
+        {
+            "$id": 19,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580590279070,
+            "millisecondsOnPlayEnd": 1580590287499
+        },
+        {
+            "$id": 20,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580590296683,
+            "millisecondsOnPlayEnd": 1580590302842
+        },
+        {
+            "$id": 21,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 15,
+            "millisecondsOnPlayStart": 1580590392225,
+            "millisecondsOnPlayEnd": 1580590402203
+        },
+        {
+            "$id": 22,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 0,
+            "millisecondsOnPlayStart": 1580590720262,
+            "millisecondsOnPlayEnd": 1580590736482
+        },
+        {
+            "$id": 23,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 30,
+            "millisecondsOnPlayStart": 1580590762287,
+            "millisecondsOnPlayEnd": 1580590774165
+        },
+        {
+            "$id": 24,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 30,
+            "millisecondsOnPlayStart": 1580590788016,
+            "millisecondsOnPlayEnd": 1580590804787
+        },
+        {
+            "$id": 25,
+            "$type": 1,
+            "playerName": "Test player",
+            "score": 45,
+            "millisecondsOnPlayStart": 1580590812621,
+            "millisecondsOnPlayEnd": 1580590823997
+>>>>>>> develop
         }
     ]
 }
