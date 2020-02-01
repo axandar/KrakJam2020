@@ -175,15 +175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083089c53bdb3164bbeb2636f8ede185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionTypes:
-  - collidedGameObjectTag: Obstacle
-    collisionHpEffect: -1
-    collisionPoints: -10
-    collisionSound: {fileID: 8300000, guid: 7904fc174a1a628449b89659fec7fb96, type: 3}
-    collisionParticleEffect: {fileID: 6236531153113935268, guid: 125b3ae7e9ceb6840b3c8b25379218fe,
-      type: 3}
-    collisionParticleEffectDurationTime: 5
-  sameObjectCollisionIgnoreTime: 1.2
+  obstacleCollisionSound: {fileID: 8300000, guid: 4c4838c5ed4bdd44f942df4da130fb63,
+    type: 3}
+  obstacleCollisionParticleEffect: {fileID: 6236531153113935268, guid: 125b3ae7e9ceb6840b3c8b25379218fe,
+    type: 3}
+  obstacleCollisionParticleEffectLifeTime: 5
+  obstacleCollisionHpEffect: -1
+  obstacleCollisonScore: -10
+  sameTypeCollisionIgnoreTime: 0
 --- !u!65 &1934176649777847905
 BoxCollider:
   m_ObjectHideFlags: 0
