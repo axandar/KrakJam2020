@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Assertions.Comparers;
 
 public class CarController : MonoBehaviour {
 	public Action playerTurningEffectsStartedEvent;
@@ -8,7 +7,7 @@ public class CarController : MonoBehaviour {
 	
 	[SerializeField] float playerAccelerationSpeed;
 	[SerializeField] float maxPlayerHorizontalVelocity;
-	[SerializeField] float playerRotationMaxValue;
+	[SerializeField] float playerTurningRotationMaxValue;
 	
 	float _playerRotationAngle;
 	Vector2 _playerInput;
@@ -53,11 +52,11 @@ public class CarController : MonoBehaviour {
 		if (playerHorizontalVelocity > 0) {
 			_playerRotationAngle = playerHorizontalVelocity
 				.RemapFloatValueToRange(0, maxPlayerHorizontalVelocity,
-					0, -playerRotationMaxValue);
+					0, -playerTurningRotationMaxValue);
 		} else if (playerHorizontalVelocity < 0) {
 			_playerRotationAngle = playerHorizontalVelocity
 				.RemapFloatValueToRange(0, -maxPlayerHorizontalVelocity,
-					0, playerRotationMaxValue);
+					0, playerTurningRotationMaxValue);
 		}
 		
 	}

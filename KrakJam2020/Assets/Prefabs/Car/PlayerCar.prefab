@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAccelerationSpeed: 10
   maxPlayerHorizontalVelocity: 5
-  playerRotationMaxValue: 60
+  playerTurningRotationMaxValue: 60
 --- !u!65 &1934176649777847905
 BoxCollider:
   m_ObjectHideFlags: 0
