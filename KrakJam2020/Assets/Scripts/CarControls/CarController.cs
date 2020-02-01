@@ -42,11 +42,11 @@ public class CarController : MonoBehaviour {
 
 	private void ManagePlayerTurningEvents() {
 		if (_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) < playerTurningEventInvokeAngleThreshold) {
-			playerTurningEffectsStoppedEvent.Invoke();
+			playerTurningEffectsStoppedEvent?.Invoke();
 			_playerTurningEventInvoked = false;
 		}
 		else if(!_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) > playerTurningEventInvokeAngleThreshold) {
-			playerTurningEffectsStartedEvent.Invoke();
+			playerTurningEffectsStartedEvent?.Invoke();
 			_playerTurningEventInvoked = true;
 		}
 	}
