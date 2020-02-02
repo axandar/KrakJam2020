@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour{
 	
-	[SerializeField] private SceneAsset sceneSwitchTo;
+	[SerializeField] private string sceneSwitchTo;
 
 	public void SwitchScene(){
-		SceneManager.LoadScene(sceneSwitchTo.name);
+		SceneManager.LoadScene(sceneSwitchTo);
 	}
 
 	public void ExitGame(){
