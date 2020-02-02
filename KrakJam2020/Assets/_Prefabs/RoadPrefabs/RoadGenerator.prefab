@@ -51,3 +51,4 @@ MonoBehaviour:
   timeToDestroy: 20
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}
+  floatingScoreSpawner: {fileID: 0}

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switcher: {fileID: 6302349166358796407}
-  gameLengthInSeconds: 10
+  gameLengthInSeconds: 150
 --- !u!114 &6302349166358796407
 MonoBehaviour:
   m_ObjectHideFlags: 0
