@@ -45,14 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f741c7b0cf0a548b2f853f7a84317c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: -5
+  score: 0
   particleEffectDuration: 2
   particleSystem: {fileID: 4937277308451044051, guid: 125b3ae7e9ceb6840b3c8b25379218fe,
     type: 3}
   heightOffset: 0
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}
-  floatingScoreSpawner: {fileID: 0}
   roadMovementSpeed: -5
   carModels:
   - {fileID: 164098, guid: 416c46ca128db5f4bb76f235b4f991d5, type: 3}
