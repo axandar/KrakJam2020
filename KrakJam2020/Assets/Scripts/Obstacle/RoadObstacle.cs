@@ -16,6 +16,7 @@ namespace Obstacle{
 		public float heightOffset;
 		public HighScore highScore;
 		public HealthPointsSystem healthPointsSystem;
+		public FloatingScoreSpawner floatingScoreSpawner;
 
 		AudioSource _audioSource;
 
@@ -33,6 +34,7 @@ namespace Obstacle{
 			
 			highScore.AddScore(score);
 			healthPointsSystem.DecreaseHealth();
+			floatingScoreSpawner.SpawnFloatingPointsAmount(score,transform.position);
 			_audioSource.Play();
 
 			if(particleSystem != null){

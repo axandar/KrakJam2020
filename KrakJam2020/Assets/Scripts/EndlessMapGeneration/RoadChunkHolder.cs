@@ -9,6 +9,7 @@ namespace EndlessMapGeneration{
 	public class RoadChunkHolder : MonoBehaviour{
 		[SerializeField] HighScore _highScore;
 		[SerializeField] HealthPointsSystem _healthPointsSystem;
+		[SerializeField] private FloatingScoreSpawner floatingScoreSpawner;
 		[SerializeField] List<RoadObstacle> roadObstaclesOnLeft;
 		[SerializeField] List<RoadObstacle> roadObstaclesOnRight;
 		[SerializeField] List<GameObject> housesOnLeft;
@@ -32,7 +33,7 @@ namespace EndlessMapGeneration{
 			if(propList.IsNullOrEmpty()){
 				return;
 			}
-			propSpawner.SpawnRandomProp(propList, _highScore, _healthPointsSystem, chanceToSpawnProp);
+			propSpawner.SpawnRandomProp(propList, _highScore, _healthPointsSystem, floatingScoreSpawner, chanceToSpawnProp);
 		}
 
 		void SpawnOnSpawner(HouseSpawner houseSpawner, List<GameObject> propList){
@@ -43,12 +44,15 @@ namespace EndlessMapGeneration{
 			houseSpawner.SpawnRandomHouse(propList);
 		}
 		
-
 		public HighScore HighScore{
 			set => _highScore = value;
 		}
 		public HealthPointsSystem HealthPointsSystem{
 			set => _healthPointsSystem = value;
+		}
+
+		public FloatingScoreSpawner UiDisplayManger {
+			set => floatingScoreSpawner = value;
 		}
 	}
 }
