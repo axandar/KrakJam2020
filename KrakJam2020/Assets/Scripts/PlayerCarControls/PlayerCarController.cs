@@ -1,10 +1,11 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PlayerCarControls{
 	public class PlayerCarController : MonoBehaviour {
-		public Action playerTurningEffectsStartedEvent;
-		public Action playerTurningEffectsStoppedEvent;
+		public UnityEvent playerTurningEffectsStartedEvent;
+		public UnityEvent playerTurningEffectsStoppedEvent;
 	
 		[SerializeField] float playerAccelerationSpeed;
 		[SerializeField] float maxPlayerHorizontalVelocity;
@@ -43,11 +44,11 @@ namespace PlayerCarControls{
 
 		void ManagePlayerTurningEvents() {
 			if (_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) < playerTurningEventInvokeAngleThreshold) {
-				playerTurningEffectsStoppedEvent?.Invoke();
+				playerTurningEffectsStoppedEvent.Invoke();
 				_playerTurningEventInvoked = false;
 			}
 			else if(!_playerTurningEventInvoked && Mathf.Abs(_playerRotationAngle) > playerTurningEventInvokeAngleThreshold) {
-				playerTurningEffectsStartedEvent?.Invoke();
+				playerTurningEffectsStartedEvent.Invoke();
 				_playerTurningEventInvoked = true;
 			}
 		}
