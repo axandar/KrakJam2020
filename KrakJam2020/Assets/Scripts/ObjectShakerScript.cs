@@ -10,10 +10,10 @@ public class ObjectShakerScript : MonoBehaviour{
     public float ShakeAmplitude = 1.2f;
     public float ShakeFrequency = 2.0f;
 
-    private float ShakeElapsedTime = 0f;
+    float ShakeElapsedTime = 0f;
 
     public CinemachineVirtualCamera VirtualCamera;
-    private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
+    CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
     void Start(){
         if (VirtualCamera != null)
@@ -24,7 +24,7 @@ public class ObjectShakerScript : MonoBehaviour{
         StartCoroutine(StartShake());
     }
 
-    private IEnumerator StartShake(){
+    IEnumerator StartShake(){
         ShakeElapsedTime = ShakeDuration;
         virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
         virtualCameraNoise.m_FrequencyGain = ShakeFrequency;

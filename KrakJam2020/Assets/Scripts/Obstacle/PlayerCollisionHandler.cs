@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Obstacle{
 	public class PlayerCollisionHandler : MonoBehaviour {
-		[SerializeField] private float forceOnCollisionWithObstacle;
-		
-		private ObjectShakerScript _objectShakerScript;
-		private Rigidbody _rigidbody;
+		[SerializeField] float forceOnCollisionWithObstacle;
 
-		private void Start(){
+		ObjectShakerScript _objectShakerScript;
+		Rigidbody _rigidbody;
+
+		void Start(){
 			_rigidbody = GetComponent<Rigidbody>();
 			_objectShakerScript = GameObject.FindGameObjectWithTag(Tags.CAMERA_TO_SHAKE)
 				.GetComponent<ObjectShakerScript>();

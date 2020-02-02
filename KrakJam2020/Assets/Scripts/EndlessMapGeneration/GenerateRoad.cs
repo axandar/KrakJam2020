@@ -11,8 +11,9 @@ public class GenerateRoad : MonoBehaviour{
     [SerializeField] Transform playerTransform;
     [SerializeField] float minDistanceToSpawnNextRoadTile;
     [SerializeField] float timeToDestroy;
-    [SerializeField] private HighScore highScore;
-    [SerializeField] private HealthPointsSystem healthPointsSystem;
+    [SerializeField] HighScore highScore;
+    [SerializeField] HealthPointsSystem healthPointsSystem;
+    [SerializeField] FloatingScoreSpawner floatingScoreSpawner;
 
     Vector3 _lastEndPointLocation;
 
@@ -28,7 +29,6 @@ public class GenerateRoad : MonoBehaviour{
         if (Vector3.Distance(playerTransform.position,_lastEndPointLocation) < minDistanceToSpawnNextRoadTile){
             SpawnRoadTile();
         }
-    
     }
 
     void SpawnRoadTile(){
@@ -40,6 +40,7 @@ public class GenerateRoad : MonoBehaviour{
         var instantiatedObject = Instantiate(roadPrefab, spawnLocation, Quaternion.identity,roadsHolder);
         instantiatedObject.HighScore = highScore;
         instantiatedObject.HealthPointsSystem = healthPointsSystem;
+        instantiatedObject.UiDisplayManger = floatingScoreSpawner;
         instantiatedObject.SpawnObjectsOnChunk();
         
 		Destroy(instantiatedObject,timeToDestroy);

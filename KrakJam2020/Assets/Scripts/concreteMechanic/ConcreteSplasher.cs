@@ -19,7 +19,7 @@ namespace concreteMechanic{
 			_audioSource = GetComponent<AudioSource>();
 		}
 
-		private void Update(){
+		void Update(){
 			if(Input.GetKey(KeyCode.Space)){
 				SplashConcrete();
 			}
