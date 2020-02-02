@@ -4,22 +4,23 @@ using TMPro;
 using UnityEngine;
 
 public class PlayerUiManager : MonoBehaviour{
-	[SerializeField] TextMeshProUGUI timeElapsedDisplayText;
+	[SerializeField] TextMeshProUGUI timeRemainingDisplayText;
 	[SerializeField] TextMeshProUGUI pointsDisplayText;
 	[SerializeField] TextMeshProUGUI HpDisplayText;
 	
 	[SerializeField] HighScore _highScore;
 	[SerializeField] HealthPointsSystem _healthPointsSystem;
+	[SerializeField] GameEnder _gameEnder;
 	
 	void Update() {
 		//TODO: execute methods from proper places/through events
-		UpdateTimeElapsedText();
+		UpdateRemainingTimeText();
 		UpdatePointsDisplayText();
-		UpdateHpDisplayText();
+		// UpdateHpDisplayText();
 	}
 
-	public void UpdateTimeElapsedText() {
-		timeElapsedDisplayText.text = _highScore.HighScoreEntry.TimePlayedInSeconds().ToString();
+	public void UpdateRemainingTimeText() {
+		timeRemainingDisplayText.text = "RemainingTime: " + _gameEnder.RemainingGameTime.ToString();
 	}
 
 	public void UpdatePointsDisplayText() {
