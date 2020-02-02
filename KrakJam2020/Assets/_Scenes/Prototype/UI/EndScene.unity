@@ -901,6 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059440006}
   - component: {fileID: 1059440007}
+  - component: {fileID: 1059440008}
   m_Layer: 0
   m_Name: HighScoreSaver
   m_TagString: Untagged
@@ -936,6 +937,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInputField: {fileID: 1937216584}
   pointsText: {fileID: 1425350150}
+--- !u!114 &1059440008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059440005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0af07b7240b4749a37c0a1be2209d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneSwitchTo: {fileID: 102900000, guid: 44cc68394a8dde446a72cb895134641c, type: 3}
 --- !u!1 &1163424699
 GameObject:
   m_ObjectHideFlags: 0
