@@ -11,9 +11,9 @@ public class GameEnder : MonoBehaviour {
     }
 
     IEnumerator CoundownRemainingGameTime() {
-        while (_remainingGameTime > 0) {
+        while (RemainingGameTime > 0) {
             yield return new WaitForSeconds(1f);
-            _remainingGameTime -= 1;
+            _remainingGameTime = RemainingGameTime - 1;
         }
         EndGame();
     }
@@ -22,4 +22,5 @@ public class GameEnder : MonoBehaviour {
         //TODO: end game, load game ended scene
     }
 
+    public int RemainingGameTime => _remainingGameTime;
 }

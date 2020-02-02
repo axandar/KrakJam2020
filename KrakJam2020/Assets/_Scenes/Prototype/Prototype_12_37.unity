@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346ea803058484b469ee030be90cc160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLengthInSeconds: 120
+  gameLengthInSeconds: 60
 --- !u!4 &1755573850
 Transform:
   m_ObjectHideFlags: 0
@@ -1066,6 +1066,10 @@ PrefabInstance:
       propertyPath: _healthPointsSystem
       value: 
       objectReference: {fileID: 1398227256}
+    - target: {fileID: 505063684, guid: 0154871854a7234468329efb73b89ff4, type: 3}
+      propertyPath: _gameEnder
+      value: 
+      objectReference: {fileID: 1755573849}
     - target: {fileID: 8226237118449392282, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
       propertyPath: m_Name
@@ -1131,20 +1135,5 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1868001319}
-    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
-        type: 3}
-      propertyPath: negativeScoreColor.b
-      value: 0.75964546
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
-        type: 3}
-      propertyPath: negativeScoreColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
-        type: 3}
-      propertyPath: negativeScoreColor.g
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0154871854a7234468329efb73b89ff4, type: 3}
