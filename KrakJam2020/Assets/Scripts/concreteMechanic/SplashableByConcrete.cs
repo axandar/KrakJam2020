@@ -24,8 +24,7 @@ namespace concreteMechanic{
 			if(isSplashed){
 				return;
 			}
-
-			Debug.Log("Splashed hole");
+			
 			isSplashed = true;
 			spriteRenderer.sprite = filledHole;
 			_roadObstacle.enabled = false;

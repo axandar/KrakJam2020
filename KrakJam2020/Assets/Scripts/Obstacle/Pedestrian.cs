@@ -1,19 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Obstacle;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class Pedestrian : RoadObstacle {
+namespace Obstacle{
+	public class Pedestrian : RoadObstacle {
 	
-	[SerializeField] private List<GameObject> victimModels;
+		[SerializeField] private List<GameObject> models;
 	
-	private void Awake(){
-		LoadRandomVictimModel();
-	}
+		private void Awake(){
+			LoadRandomModel();
+		}
 
-	private void LoadRandomVictimModel(){
-		var randomCarModel = victimModels[Random.Range(0, victimModels.Count)];
-		var instantiatedCarModel = Instantiate(randomCarModel, gameObject.transform);
-	}
+		private void LoadRandomModel(){
+			var randomPedestrianModel = models[Random.Range(0, models.Count)];
+			Instantiate(randomPedestrianModel, gameObject.transform);
+		}
 	    
+	}
 }

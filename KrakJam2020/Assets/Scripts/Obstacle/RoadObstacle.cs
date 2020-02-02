@@ -9,21 +9,18 @@ using UnityEngine;
 namespace Obstacle{
 	[RequireComponent(typeof(Rigidbody), typeof(BoxCollider), 
 		typeof(AudioSource))]
-	[RequireComponent(typeof(ParticleSystem))]
 	public class RoadObstacle : MonoBehaviour {
 		[SerializeField] private int score;
 		[SerializeField] private float particleEffectDuration;
+		[SerializeField] private ParticleSystem particleSystem;
 		public float heightOffset;
 		public HighScore highScore;
 		public HealthPointsSystem healthPointsSystem;
 
 		private AudioSource _audioSource;
-		private ParticleSystem _particleSystem;
-		
-		
+
 		private void Start(){
 			_audioSource = GetComponent<AudioSource>();
-			_particleSystem = GetComponent<ParticleSystem>();
 		}
 
 		private void OnTriggerEnter(Collider other){
@@ -37,13 +34,17 @@ namespace Obstacle{
 			highScore.AddScore(score);
 			healthPointsSystem.DecreaseHealth();
 			_audioSource.Play();
-			_particleSystem.Play();
-			StartCoroutine(WaitForParticleSystemStop());
+
+			if(particleSystem != null){
+				var localParticleSystem = Instantiate(particleSystem, transform);
+				localParticleSystem.Play();
+				StartCoroutine(WaitForParticleSystemStop(localParticleSystem));
+			}
 		}
 		
-		private IEnumerator WaitForParticleSystemStop(){
+		private IEnumerator WaitForParticleSystemStop(ParticleSystem localParticleSystem){
 			yield return new WaitForSeconds(particleEffectDuration);
-			_particleSystem.Stop();
+			localParticleSystem.Stop();
 		}
 	}
 }
