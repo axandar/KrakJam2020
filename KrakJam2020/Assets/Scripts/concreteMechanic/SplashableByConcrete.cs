@@ -29,6 +29,7 @@ namespace concreteMechanic{
 			spriteRenderer.sprite = filledHole;
 			_roadObstacle.enabled = false;
 			highScore.AddScore(scoreGainedBySplashing);
+			_roadObstacle.floatingScoreSpawner.SpawnFloatingPointsAmount(scoreGainedBySplashing, transform.position);
 		}
 	}
 }

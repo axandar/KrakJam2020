@@ -212,6 +212,16 @@ PrefabInstance:
       propertyPath: healthPointsSystem
       value: 
       objectReference: {fileID: 1398227256}
+    - target: {fileID: 2127588733937832179, guid: 95b4f9b973770df40ba1f109b31db4d0,
+        type: 3}
+      propertyPath: uiDisplayManager
+      value: 
+      objectReference: {fileID: 505063685}
+    - target: {fileID: 2127588733937832179, guid: 95b4f9b973770df40ba1f109b31db4d0,
+        type: 3}
+      propertyPath: floatingScoreSpawner
+      value: 
+      objectReference: {fileID: 505063685}
     - target: {fileID: 2127588733937832180, guid: 95b4f9b973770df40ba1f109b31db4d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -269,6 +279,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95b4f9b973770df40ba1f109b31db4d0, type: 3}
+--- !u!114 &505063685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8226237118886032281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1789c7881ad9459fa41ddcb2b392061f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507047577
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +702,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1063456004}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1868001319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8407843694911609091, guid: a71f013303687204baf52741f9a56d81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063456004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1868001324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -921,6 +949,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 505063684, guid: 0154871854a7234468329efb73b89ff4, type: 3}
+      propertyPath: _highScore
+      value: 
+      objectReference: {fileID: 1398227255}
+    - target: {fileID: 505063684, guid: 0154871854a7234468329efb73b89ff4, type: 3}
+      propertyPath: _healthPointsSystem
+      value: 
+      objectReference: {fileID: 1398227256}
     - target: {fileID: 8226237118449392282, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
       propertyPath: m_Name
@@ -983,13 +1019,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
-      propertyPath: _highScore
+      propertyPath: cameraTransform
       value: 
-      objectReference: {fileID: 1398227255}
-    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
-        type: 3}
-      propertyPath: _healthPointsSystem
-      value: 
-      objectReference: {fileID: 1398227256}
+      objectReference: {fileID: 1868001319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0154871854a7234468329efb73b89ff4, type: 3}

@@ -1,16 +1,16 @@
-using healthPointSystem;
+﻿using healthPointSystem;
 using highScore;
 using TMPro;
 using UnityEngine;
 
-public class UiDisplayManager : MonoBehaviour {
+public class PlayerUiManager : MonoBehaviour{
 	[SerializeField] TextMeshProUGUI timeElapsedDisplayText;
 	[SerializeField] TextMeshProUGUI pointsDisplayText;
 	[SerializeField] TextMeshProUGUI HpDisplayText;
-
+	
 	[SerializeField] HighScore _highScore;
 	[SerializeField] HealthPointsSystem _healthPointsSystem;
-
+	
 	void Update() {
 		//TODO: execute methods from proper places/through events
 		UpdateTimeElapsedText();

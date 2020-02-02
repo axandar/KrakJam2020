@@ -320,6 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8226237118449392285}
   - component: {fileID: 8459044391398755815}
+  - component: {fileID: 505063684}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -352,6 +353,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1789c7881ad9459fa41ddcb2b392061f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingScoreTextPrefab: {fileID: 5716194690787586692, guid: 7606e960844ef6540bf954f277933bf4,
+    type: 3}
+  floatingTextMoveUpSpeed: 4
+  floatingTextYSpawnOffset: 1
+  floatingPointsLingerTime: 3
+  cameraTransform: {fileID: 0}
+--- !u!114 &505063684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8226237118449392282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf1d117da10fc44d8fd5fbcd581e7fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeElapsedDisplayText: {fileID: 8226237119755959803}
