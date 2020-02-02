@@ -17,7 +17,6 @@ public class HighScoreSaver : MonoBehaviour{
     }
 
     public void SaveHighScore(){
-        Debug.Log(_highScore.HighScoreEntry.Score);
         _highScore.SaveScore(playerInputField.text);
         GetComponent<SceneSwitcher>().SwitchScene();
     }
