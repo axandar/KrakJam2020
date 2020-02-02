@@ -12,21 +12,20 @@ namespace EndlessMapGeneration{
 		[SerializeField] float offsetZ;
 		
 		public void SpawnRandomProp(List<RoadObstacle> propList, HighScore highScore,
-			HealthPointsSystem healthPointsSystem, FloatingScoreSpawner floatingScoreSpawner , float chanceToSpawnProp){
+			HealthPointsSystem healthPointsSystem, float chanceToSpawnProp){
 			if(Random.value <= chanceToSpawnProp){
-				SpawnRandomProp(propList, highScore, healthPointsSystem, floatingScoreSpawner);
+				SpawnRandomProp(propList, highScore, healthPointsSystem);
 			}
 		}
 		
 		public void SpawnRandomProp(List<RoadObstacle> propList, HighScore highScore,
-			HealthPointsSystem healthPointsSystem, FloatingScoreSpawner floatingScoreSpawner){
+			HealthPointsSystem healthPointsSystem){
 			var propToSpawn = GetRandomProp(propList);
 			var randomPosition = GetRandomPosition(propToSpawn);
 
 			var prop = Instantiate(propToSpawn, randomPosition, propToSpawn.transform.rotation);
 			prop.highScore = highScore;
 			prop.healthPointsSystem = healthPointsSystem;
-			prop.floatingScoreSpawner = floatingScoreSpawner;
 			
 			Destroy(prop.gameObject, 10f);
 		}

@@ -10,12 +10,12 @@ namespace concreteMechanic{
 		[SerializeField] bool isSplashed;
 		[SerializeField] int scoreGainedBySplashing;
 		[SerializeField] HighScore highScore;
-		[SerializeField] SpriteRenderer spriteRenderer;
-		[SerializeField] Sprite filledHole;
+		[SerializeField] private SpriteRenderer spriteRenderer;
+		[SerializeField] private Sprite filledHole;
+		
+		private RoadObstacle _roadObstacle;
 
-		RoadObstacle _roadObstacle;
-
-		void Start(){
+		private void Start(){
 			_roadObstacle = GetComponent<RoadObstacle>();
 			highScore = _roadObstacle.highScore;
 		}
@@ -29,7 +29,6 @@ namespace concreteMechanic{
 			spriteRenderer.sprite = filledHole;
 			_roadObstacle.enabled = false;
 			highScore.AddScore(scoreGainedBySplashing);
-			_roadObstacle.floatingScoreSpawner.SpawnFloatingPointsAmount(scoreGainedBySplashing, transform.position);
 		}
 	}
 }

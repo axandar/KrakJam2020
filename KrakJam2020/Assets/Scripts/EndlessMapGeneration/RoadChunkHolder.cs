@@ -7,18 +7,17 @@ using UnityEngine;
 
 namespace EndlessMapGeneration{
 	public class RoadChunkHolder : MonoBehaviour{
-		[SerializeField] HighScore _highScore;
-		[SerializeField] HealthPointsSystem _healthPointsSystem;
-		[SerializeField] private FloatingScoreSpawner floatingScoreSpawner;
-		[SerializeField] List<RoadObstacle> roadObstaclesOnLeft;
-		[SerializeField] List<RoadObstacle> roadObstaclesOnRight;
-		[SerializeField] List<GameObject> housesOnLeft;
-		[SerializeField] List<GameObject> housesOnRight;
+		[SerializeField] private HighScore _highScore;
+		[SerializeField] private HealthPointsSystem _healthPointsSystem;
+		[SerializeField] private List<RoadObstacle> roadObstaclesOnLeft;
+		[SerializeField] private List<RoadObstacle> roadObstaclesOnRight;
+		[SerializeField] private List<GameObject> housesOnLeft;
+		[SerializeField] private List<GameObject> housesOnRight;
 
-		[SerializeField] PropSpawner leftRoadChunk;
-		[SerializeField] PropSpawner rightRoadChunk;
-		[SerializeField] HouseSpawner leftHouseChunk;
-		[SerializeField] HouseSpawner rightHouseChunk;
+		[SerializeField] private PropSpawner leftRoadChunk;
+		[SerializeField] private PropSpawner rightRoadChunk;
+		[SerializeField] private HouseSpawner leftHouseChunk;
+		[SerializeField] private HouseSpawner rightHouseChunk;
 		
 		[Range(0, 1)] [SerializeField] float chanceToSpawnProp;
 
@@ -29,14 +28,14 @@ namespace EndlessMapGeneration{
 			SpawnOnSpawner(rightHouseChunk, housesOnRight);
 		}
 
-		void SpawnOnSpawner(PropSpawner propSpawner, List<RoadObstacle> propList){
+		private void SpawnOnSpawner(PropSpawner propSpawner, List<RoadObstacle> propList){
 			if(propList.IsNullOrEmpty()){
 				return;
 			}
-			propSpawner.SpawnRandomProp(propList, _highScore, _healthPointsSystem, floatingScoreSpawner, chanceToSpawnProp);
+			propSpawner.SpawnRandomProp(propList, _highScore, _healthPointsSystem, chanceToSpawnProp);
 		}
 
-		void SpawnOnSpawner(HouseSpawner houseSpawner, List<GameObject> propList){
+		private void SpawnOnSpawner(HouseSpawner houseSpawner, List<GameObject> propList){
 			if(propList.IsNullOrEmpty()){
 				return;
 			}
@@ -44,15 +43,12 @@ namespace EndlessMapGeneration{
 			houseSpawner.SpawnRandomHouse(propList);
 		}
 		
+
 		public HighScore HighScore{
 			set => _highScore = value;
 		}
 		public HealthPointsSystem HealthPointsSystem{
 			set => _healthPointsSystem = value;
-		}
-
-		public FloatingScoreSpawner UiDisplayManger {
-			set => floatingScoreSpawner = value;
 		}
 	}
 }
