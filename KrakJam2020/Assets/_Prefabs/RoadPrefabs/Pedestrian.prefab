@@ -180,3 +180,4 @@ MonoBehaviour:
   healthPointsSystem: {fileID: 0}
   models:
   - {fileID: 1109705922278564, guid: 7851e97aa32f5474f92b61e3e4988c1a, type: 3}
+  - {fileID: 1109705922278564, guid: ecee0fe3702190841b52d56511d751ea, type: 3}
