@@ -180,6 +180,15 @@ MonoBehaviour:
   healthPointsSystem: {fileID: 0}
   floatingScoreSpawner: {fileID: 0}
   models:
+  - {fileID: 153506, guid: 46046f4999ed889429c0ca851fcafdb6, type: 3}
+  - {fileID: 128674, guid: 098b92ae790d95c46a1ff03bbf465bca, type: 3}
+  - {fileID: 183608, guid: 87bf1b7636f488d4e9add06e54dab26d, type: 3}
+  - {fileID: 184310, guid: b0adecd8939bff54f98189b34e8841a4, type: 3}
+  - {fileID: 107314, guid: 0f373e98d6aef5d4a8b0036af2558b0d, type: 3}
+  - {fileID: 166044, guid: ea2e0fa6166556b48b9bec4fa3403244, type: 3}
+  - {fileID: 153682, guid: ccd6d77f2891807419299b434c776577, type: 3}
+  - {fileID: 183828, guid: bd234294c37e5b34c81d3c0b63aff132, type: 3}
+  - {fileID: 191860, guid: 926fbbeb47063fd498eea93be978b80e, type: 3}
   - {fileID: 153506, guid: 5e488cfd825ce044395037d93a9d8eb6, type: 3}
   - {fileID: 128674, guid: 471247d5cf89b2c46bcde0f08524197e, type: 3}
   - {fileID: 183608, guid: 6412c6bdd410913469520a05a1632885, type: 3}
