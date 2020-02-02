@@ -73,7 +73,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2cc41bacaf9b2204bb56a2e84340bb6b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -172,28 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  particleEffectDuration: 2
+  particleEffectDuration: 0
   particleSystem: {fileID: 405754282581178340, guid: ee1b671ef57e72e46836b9b767891306,
     type: 3}
   heightOffset: 0
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}
   models:
-  - {fileID: 153506, guid: 46046f4999ed889429c0ca851fcafdb6, type: 3}
-  - {fileID: 128674, guid: 098b92ae790d95c46a1ff03bbf465bca, type: 3}
-  - {fileID: 183608, guid: 87bf1b7636f488d4e9add06e54dab26d, type: 3}
-  - {fileID: 184310, guid: b0adecd8939bff54f98189b34e8841a4, type: 3}
-  - {fileID: 107314, guid: 0f373e98d6aef5d4a8b0036af2558b0d, type: 3}
-  - {fileID: 166044, guid: ea2e0fa6166556b48b9bec4fa3403244, type: 3}
-  - {fileID: 153682, guid: ccd6d77f2891807419299b434c776577, type: 3}
-  - {fileID: 183828, guid: bd234294c37e5b34c81d3c0b63aff132, type: 3}
-  - {fileID: 191860, guid: 926fbbeb47063fd498eea93be978b80e, type: 3}
-  - {fileID: 153506, guid: 5e488cfd825ce044395037d93a9d8eb6, type: 3}
-  - {fileID: 128674, guid: 471247d5cf89b2c46bcde0f08524197e, type: 3}
-  - {fileID: 183608, guid: 6412c6bdd410913469520a05a1632885, type: 3}
-  - {fileID: 184310, guid: 236e70cfb8ad0fc448c79a2155a5d3c2, type: 3}
-  - {fileID: 107314, guid: 841e8e4f1a54c754396b7559d1cc6fad, type: 3}
-  - {fileID: 166044, guid: adad89669382b0743a2c2f162c9601b0, type: 3}
-  - {fileID: 153682, guid: 48b470c6a762f60438c631f219257520, type: 3}
-  - {fileID: 183828, guid: 5f6cbb0f4dd572e47ab1ee6c2a3a36d1, type: 3}
-  - {fileID: 191860, guid: 498a13929c1393e44be1126bcadc448b, type: 3}
+  - {fileID: 1109705922278564, guid: 7851e97aa32f5474f92b61e3e4988c1a, type: 3}

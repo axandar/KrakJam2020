@@ -4916,7 +4916,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: -20
   particleEffectDuration: 2
-  particleSystem: {fileID: 0}
   heightOffset: 0
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}

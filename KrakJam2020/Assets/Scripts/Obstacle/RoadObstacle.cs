@@ -10,21 +10,20 @@ namespace Obstacle{
 	[RequireComponent(typeof(Rigidbody), typeof(BoxCollider), 
 		typeof(AudioSource))]
 	public class RoadObstacle : MonoBehaviour {
-		[SerializeField] int score;
-		[SerializeField] float particleEffectDuration;
-		[SerializeField] ParticleSystem particleSystem;
+		[SerializeField] private int score;
+		[SerializeField] private float particleEffectDuration;
+		[SerializeField] private ParticleSystem particleSystem;
 		public float heightOffset;
 		public HighScore highScore;
 		public HealthPointsSystem healthPointsSystem;
-		public FloatingScoreSpawner floatingScoreSpawner;
 
-		AudioSource _audioSource;
+		private AudioSource _audioSource;
 
-		void Start(){
+		private void Start(){
 			_audioSource = GetComponent<AudioSource>();
 		}
 
-		void OnTriggerEnter(Collider other){
+		private void OnTriggerEnter(Collider other){
 			if(!other.gameObject.CompareTag(Tags.PLAYER)){
 				return;
 			}
@@ -34,7 +33,6 @@ namespace Obstacle{
 			
 			highScore.AddScore(score);
 			healthPointsSystem.DecreaseHealth();
-			floatingScoreSpawner.SpawnFloatingPointsAmount(score,transform.position);
 			_audioSource.Play();
 
 			if(particleSystem != null){
@@ -43,8 +41,8 @@ namespace Obstacle{
 				StartCoroutine(WaitForParticleSystemStop(localParticleSystem));
 			}
 		}
-
-		IEnumerator WaitForParticleSystemStop(ParticleSystem localParticleSystem){
+		
+		private IEnumerator WaitForParticleSystemStop(ParticleSystem localParticleSystem){
 			yield return new WaitForSeconds(particleEffectDuration);
 			localParticleSystem.Stop();
 		}
