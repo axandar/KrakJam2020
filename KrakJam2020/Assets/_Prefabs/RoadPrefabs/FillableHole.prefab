@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSplashed: 0
-  scoreGainedBySplashing: 15
+  scoreGainedBySplashing: 20
   highScore: {fileID: 0}
   spriteRenderer: {fileID: 1571854120313005301}
   filledHole: {fileID: 21300000, guid: 322d6448aed7af44184f5f9494ff8545, type: 3}
@@ -4914,12 +4914,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c13f15172d4571a99a070818733fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: -20
+  score: -5
   particleEffectDuration: 2
   particleSystem: {fileID: 0}
   heightOffset: 0
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}
+  floatingScoreSpawner: {fileID: 0}
 --- !u!1 &5392926434815416680
 GameObject:
   m_ObjectHideFlags: 0
