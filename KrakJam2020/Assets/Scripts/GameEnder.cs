@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class GameEnder : MonoBehaviour {
+public class GameEnder : MonoBehaviour{
+    [SerializeField] private SceneSwitcher _switcher;
     [SerializeField] int gameLengthInSeconds;
     int _remainingGameTime;
 
@@ -19,7 +20,7 @@ public class GameEnder : MonoBehaviour {
     }
     
     void EndGame() {
-        //TODO: end game, load game ended scene
+        _switcher.SwitchScene();
     }
 
     public int RemainingGameTime => _remainingGameTime;
