@@ -76,6 +76,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 25
+--- !u!114 &896871356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738933981000823544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802abaa60e1a9c247b786f0303e6156b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trails:
+  - {fileID: 5268984533801121150}
+  - {fileID: 8404962237262919528}
+  - {fileID: 9042263289536422105}
+  - {fileID: 5901222820739931034}
+  - {fileID: 784078835026221568}
+  - {fileID: 2323003253827127548}
 --- !u!1001 &4463496859397617776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,6 +177,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4463496859563599113}
     m_Modifications:
+    - target: {fileID: 1648859625630979204, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_TagString
+      value: TruckColorChanger
+      objectReference: {fileID: 0}
     - target: {fileID: 1934176649777847905, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
       propertyPath: m_Size.x
@@ -188,6 +212,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2147497495428134238, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967703385231746978, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4001688646655152184, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
       propertyPath: m_IsTrigger
@@ -217,6 +251,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: -0.13124755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4651396199908515195, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284387166348724938, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311111, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
@@ -275,6 +319,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
+      propertyPath: playerTurningEffectsStartedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStoppedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
       propertyPath: playerAccelerationSpeed
       value: 50
       objectReference: {fileID: 0}
@@ -293,6 +347,56 @@ PrefabInstance:
       propertyPath: playerTurningEventInvokeAngleThreshold
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 896871356}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateTrails
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStoppedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 896871356}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStoppedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeactivateTrails
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStoppedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStoppedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239651303488311129, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: playerTurningEffectsStoppedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6239651303488311130, guid: 2d79650b7b61af5458838e0f85f982cb,
         type: 3}
       propertyPath: m_Name
@@ -303,12 +407,64 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7788091949329180216, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425873415801899228, guid: 2d79650b7b61af5458838e0f85f982cb,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2038605759304272191, guid: 2d79650b7b61af5458838e0f85f982cb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d79650b7b61af5458838e0f85f982cb, type: 3}
+--- !u!1 &7738933981000823544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6239651303488311130, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7738933981000823525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6239651303488311111, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5268984533801121150 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 8425873415801899228, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &8404962237262919528 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 5284387166348724938, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &9042263289536422105 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 4651396199908515195, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5901222820739931034 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7788091949329180216, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &784078835026221568 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 3967703385231746978, guid: 2d79650b7b61af5458838e0f85f982cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4463496859917860258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &2323003253827127548 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 2147497495428134238, guid: 2d79650b7b61af5458838e0f85f982cb,
     type: 3}
   m_PrefabInstance: {fileID: 4463496859917860258}
   m_PrefabAsset: {fileID: 0}
