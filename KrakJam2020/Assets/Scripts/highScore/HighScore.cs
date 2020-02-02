@@ -14,28 +14,31 @@ namespace highScore{
 		
 		DateTime epochStart = new DateTime(1970, 1, 1, 0, 0, 0, 
 			DateTimeKind.Utc);
+
+		private void Awake(){
+			DontDestroyOnLoad(gameObject);
+		}
 		
 		void Start(){
 			LoadHighScoresFromFile();
-			InitializeNewGame("Test player");//TODO powinno byc wywolane przed nowa gra
+			InitializeNewGame();//TODO powinno byc wywolane po nowej gra
 		}
 
-		void OnDestroy(){
-			SaveNewScore();//TODO powinno byc wywolywane na koncu gry
+		public void SaveScore(string playerName){
+			SaveNewScore(playerName);
 			SaveHighScoresToFile();
 		}
 
 		/**
 		 * Initialize new HighScoreEntry with playerName
 		 */
-		public void InitializeNewGame(string playerName){
+		public void InitializeNewGame(){
 			_highScoreEntry = new HighScoreEntry{
-				PlayerName = playerName,
+				PlayerName = "",
 				Score = 0,
 				MillisecondsOnPlayStart = (long) (DateTime.UtcNow - epochStart).TotalMilliseconds
 			};
 		}
-
 		/**
 		 * Adds score to actual HighScoreEntry
 		 */
@@ -46,7 +49,8 @@ namespace highScore{
 		/**
 		 * Saves score to list
 		 */
-		public void SaveNewScore(){
+		public void SaveNewScore(string playerName){
+			_highScoreEntry.PlayerName = playerName;
 			_highScoreEntry.MillisecondsOnPlayEnd = (long) (DateTime.UtcNow - epochStart).TotalMilliseconds;
 			_highScoreEntries.Add(_highScoreEntry);
 		}
