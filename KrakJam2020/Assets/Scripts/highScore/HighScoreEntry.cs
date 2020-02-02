@@ -1,5 +1,4 @@
 using System;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace highScore{
@@ -9,6 +8,10 @@ namespace highScore{
 		[SerializeField] int score;
 		[SerializeField] long millisecondsOnPlayStart;
 		[SerializeField] long millisecondsOnPlayEnd;
+		
+		DateTime epochStart = new DateTime(1970, 1, 1, 0, 0, 0, 
+			DateTimeKind.Utc);
+		
 		public HighScoreEntry(){}
 
 		public string PlayerName{
@@ -32,7 +35,7 @@ namespace highScore{
 		}
 
 		public int TimePlayedInSeconds(){
-			var millisOfPlay = millisecondsOnPlayEnd - millisecondsOnPlayStart;
+			var millisOfPlay = (DateTime.UtcNow - epochStart).TotalMilliseconds - millisecondsOnPlayStart;
 			return (int) (millisOfPlay / 1000);
 		}
 	}

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -434,6 +434,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8407843694911609089, guid: a71f013303687204baf52741f9a56d81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8407843694911609091, guid: a71f013303687204baf52741f9a56d81,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -924,17 +929,17 @@ PrefabInstance:
     - target: {fileID: 8226237118449392285, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1474.9629
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226237118449392285, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.545331
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226237118449392285, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.103677
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226237118449392285, guid: 0154871854a7234468329efb73b89ff4,
         type: 3}
@@ -976,5 +981,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
+        type: 3}
+      propertyPath: _highScore
+      value: 
+      objectReference: {fileID: 1398227255}
+    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
+        type: 3}
+      propertyPath: _healthPointsSystem
+      value: 
+      objectReference: {fileID: 1398227256}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0154871854a7234468329efb73b89ff4, type: 3}

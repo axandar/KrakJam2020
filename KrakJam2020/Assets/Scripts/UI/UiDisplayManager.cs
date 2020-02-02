@@ -2,7 +2,6 @@ using healthPointSystem;
 using highScore;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UiDisplayManager : MonoBehaviour {
 	[SerializeField] TextMeshProUGUI timeElapsedDisplayText;
@@ -12,15 +11,22 @@ public class UiDisplayManager : MonoBehaviour {
 	[SerializeField] HighScore _highScore;
 	[SerializeField] HealthPointsSystem _healthPointsSystem;
 
+	void Update() {
+		//TODO: execute methods from proper places/through events
+		UpdateTimeElapsedText();
+		UpdatePointsDisplayText();
+		UpdateHpDisplayText();
+	}
+
 	public void UpdateTimeElapsedText() {
 		timeElapsedDisplayText.text = _highScore.HighScoreEntry.TimePlayedInSeconds().ToString();
 	}
 
 	public void UpdatePointsDisplayText() {
-		pointsDisplayText.text = _highScore.HighScoreEntry.Score.ToString();
+		pointsDisplayText.text = "Score: " + _highScore.HighScoreEntry.Score.ToString();
 	}
 
 	public void UpdateHpDisplayText() {
-		HpDisplayText.text = _healthPointsSystem.MaxHp.ToString();
+		HpDisplayText.text = "HP: " + _healthPointsSystem.MaxHp.ToString();
 	}
 }
