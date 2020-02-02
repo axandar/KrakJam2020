@@ -11,8 +11,8 @@ public class GenerateRoad : MonoBehaviour{
     [SerializeField] Transform playerTransform;
     [SerializeField] float minDistanceToSpawnNextRoadTile;
     [SerializeField] float timeToDestroy;
-    [SerializeField] private HighScore highScore;
-    [SerializeField] private HealthPointsSystem healthPointsSystem;
+    [SerializeField] HighScore highScore;
+    [SerializeField] HealthPointsSystem healthPointsSystem;
 
     Vector3 _lastEndPointLocation;
 

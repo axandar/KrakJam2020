@@ -10,12 +10,12 @@ namespace concreteMechanic{
 		[SerializeField] bool isSplashed;
 		[SerializeField] int scoreGainedBySplashing;
 		[SerializeField] HighScore highScore;
-		[SerializeField] private SpriteRenderer spriteRenderer;
-		[SerializeField] private Sprite filledHole;
-		
-		private RoadObstacle _roadObstacle;
+		[SerializeField] SpriteRenderer spriteRenderer;
+		[SerializeField] Sprite filledHole;
 
-		private void Start(){
+		RoadObstacle _roadObstacle;
+
+		void Start(){
 			_roadObstacle = GetComponent<RoadObstacle>();
 			highScore = _roadObstacle.highScore;
 		}
