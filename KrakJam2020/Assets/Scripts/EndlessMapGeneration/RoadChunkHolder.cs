@@ -7,18 +7,18 @@ using UnityEngine;
 
 namespace EndlessMapGeneration{
 	public class RoadChunkHolder : MonoBehaviour{
-		[SerializeField] private HighScore _highScore;
-		[SerializeField] private HealthPointsSystem _healthPointsSystem;
+		[SerializeField] HighScore _highScore;
+		[SerializeField] HealthPointsSystem _healthPointsSystem;
 		[SerializeField] private FloatingScoreSpawner floatingScoreSpawner;
-		[SerializeField] private List<RoadObstacle> roadObstaclesOnLeft;
-		[SerializeField] private List<RoadObstacle> roadObstaclesOnRight;
-		[SerializeField] private List<GameObject> housesOnLeft;
-		[SerializeField] private List<GameObject> housesOnRight;
+		[SerializeField] List<RoadObstacle> roadObstaclesOnLeft;
+		[SerializeField] List<RoadObstacle> roadObstaclesOnRight;
+		[SerializeField] List<GameObject> housesOnLeft;
+		[SerializeField] List<GameObject> housesOnRight;
 
-		[SerializeField] private PropSpawner leftRoadChunk;
-		[SerializeField] private PropSpawner rightRoadChunk;
-		[SerializeField] private HouseSpawner leftHouseChunk;
-		[SerializeField] private HouseSpawner rightHouseChunk;
+		[SerializeField] PropSpawner leftRoadChunk;
+		[SerializeField] PropSpawner rightRoadChunk;
+		[SerializeField] HouseSpawner leftHouseChunk;
+		[SerializeField] HouseSpawner rightHouseChunk;
 		
 		[Range(0, 1)] [SerializeField] float chanceToSpawnProp;
 
@@ -29,14 +29,14 @@ namespace EndlessMapGeneration{
 			SpawnOnSpawner(rightHouseChunk, housesOnRight);
 		}
 
-		private void SpawnOnSpawner(PropSpawner propSpawner, List<RoadObstacle> propList){
+		void SpawnOnSpawner(PropSpawner propSpawner, List<RoadObstacle> propList){
 			if(propList.IsNullOrEmpty()){
 				return;
 			}
 			propSpawner.SpawnRandomProp(propList, _highScore, _healthPointsSystem, floatingScoreSpawner, chanceToSpawnProp);
 		}
 
-		private void SpawnOnSpawner(HouseSpawner houseSpawner, List<GameObject> propList){
+		void SpawnOnSpawner(HouseSpawner houseSpawner, List<GameObject> propList){
 			if(propList.IsNullOrEmpty()){
 				return;
 			}
