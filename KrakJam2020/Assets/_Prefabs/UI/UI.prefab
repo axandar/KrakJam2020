@@ -361,7 +361,7 @@ MonoBehaviour:
   floatingTextYSpawnOffset: 1
   floatingTextLingerTime: 3
   positiveScoreColor: {r: 0.10173806, g: 0.8396226, b: 0.099012084, a: 1}
-  negativeScoreColor: {r: 1, g: 0, b: 0.019191265, a: 1}
+  negativeScoreColor: {r: 1, g: 0, b: 0.75964546, a: 1}
   cameraTransform: {fileID: 0}
 --- !u!114 &505063684
 MonoBehaviour:

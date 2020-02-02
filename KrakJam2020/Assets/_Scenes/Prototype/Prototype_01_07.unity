@@ -1087,5 +1087,20 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1868001319}
+    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
+        type: 3}
+      propertyPath: negativeScoreColor.b
+      value: 0.75964546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
+        type: 3}
+      propertyPath: negativeScoreColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459044391398755815, guid: 0154871854a7234468329efb73b89ff4,
+        type: 3}
+      propertyPath: negativeScoreColor.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0154871854a7234468329efb73b89ff4, type: 3}
