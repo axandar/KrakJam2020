@@ -1153,7 +1153,7 @@ PrefabInstance:
     - target: {fileID: 6953632525990970339, guid: 904df0679e9251940ae1745e8f7bda67,
         type: 3}
       propertyPath: gameLengthInSeconds
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 904df0679e9251940ae1745e8f7bda67, type: 3}
