@@ -6,7 +6,10 @@ public class FloatingScoreSpawner : MonoBehaviour {
 	[SerializeField] GameObject floatingScoreTextPrefab;
 	[SerializeField] float floatingTextMoveUpSpeed;
 	[SerializeField] float floatingTextYSpawnOffset;
-	[SerializeField] float floatingPointsLingerTime;
+	[SerializeField] float floatingTextLingerTime;
+
+	[SerializeField] Color positiveScoreColor;
+	[SerializeField] Color negativeScoreColor;
 
 	[SerializeField] Transform cameraTransform;
 
@@ -16,11 +19,15 @@ public class FloatingScoreSpawner : MonoBehaviour {
 		var spawnedFloatingScoreObject = Instantiate(floatingScoreTextPrefab, spawnPosInternal,
 			floatingScoreTextPrefab.transform.rotation);
 		
-		var spawnedFloatingScoreText = spawnedFloatingScoreObject.GetComponentInChildren<TextMeshProUGUI>();
-		spawnedFloatingScoreText.text = pointAmount.ToString();
-		spawnedFloatingScoreText.color = pointAmount > 0 ? Color.green : Color.red;
+		SetupFloatingScoreTextSettings(spawnedFloatingScoreObject, pointAmount);
 		StartCoroutine(FloatingTextCoroutine(spawnedFloatingScoreObject, floatingTextMoveUpSpeed,
-			floatingPointsLingerTime));
+			floatingTextLingerTime));
+	}
+
+	private void SetupFloatingScoreTextSettings(GameObject floatingScoreObject, int pointAmount) {
+		var floatingScoreText = floatingScoreObject.GetComponentInChildren<TextMeshProUGUI>();
+		floatingScoreText.text = pointAmount.ToString();
+		floatingScoreText.color = pointAmount > 0 ? positiveScoreColor : negativeScoreColor;
 	}
 
 	private IEnumerator FloatingTextCoroutine(GameObject floatingText, float moveUpSpeed, float destroyTime) {
