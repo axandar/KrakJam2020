@@ -6,14 +6,14 @@ using Random = UnityEngine.Random;
 
 public class RoadCar : RoadObstacle {
 	[SerializeField] float roadMovementSpeed;
-	[SerializeField] private List<GameObject> carModels;
-	[SerializeField] private float carModelYRotation;
+	[SerializeField] List<GameObject> carModels;
+	[SerializeField] float carModelYRotation;
 
-	private void Awake(){
+	void Awake(){
 		LoadRandomCarModel();
 	}
 
-	private void LoadRandomCarModel(){
+	void LoadRandomCarModel(){
 		var randomCarModel = carModels[Random.Range(0, carModels.Count)];
 		var instantiatedCarModel = Instantiate(randomCarModel, gameObject.transform);
 		var carTransform = instantiatedCarModel.transform;
