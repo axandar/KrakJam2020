@@ -4914,12 +4914,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c13f15172d4571a99a070818733fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: -20
+  score: -5
   particleEffectDuration: 2
   particleSystem: {fileID: 0}
   heightOffset: 0
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}
+  floatingScoreSpawner: {fileID: 0}
 --- !u!1 &5392926434815416680
 GameObject:
   m_ObjectHideFlags: 0
