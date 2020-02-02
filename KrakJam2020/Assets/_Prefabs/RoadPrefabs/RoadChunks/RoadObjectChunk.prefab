@@ -113,13 +113,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _highScore: {fileID: 0}
   _healthPointsSystem: {fileID: 0}
+  floatingScoreSpawner: {fileID: 0}
   roadObstaclesOnLeft:
   - {fileID: 7676673028485685241, guid: acdf346bfa742ec4190015e1480d97c7, type: 3}
   - {fileID: 1921689966861071987, guid: 7e96d4a68ef11ae4d92eb480508a3237, type: 3}
-  - {fileID: 2268628182600521534, guid: 445120d555fad5d4f9e2c2d0decc7412, type: 3}
   - {fileID: 3523247673035350140, guid: 993d230fe4a017c49bc3086a86d6705f, type: 3}
+  - {fileID: 1273330989045709716, guid: 46046f4999ed889429c0ca851fcafdb6, type: 3}
+  - {fileID: 6900024445576111837, guid: 098b92ae790d95c46a1ff03bbf465bca, type: 3}
+  - {fileID: 7549099952090593530, guid: 87bf1b7636f488d4e9add06e54dab26d, type: 3}
+  - {fileID: 4015665958687545065, guid: b0adecd8939bff54f98189b34e8841a4, type: 3}
+  - {fileID: 1859992770073770156, guid: 0f373e98d6aef5d4a8b0036af2558b0d, type: 3}
+  - {fileID: 5651762391005587168, guid: ea2e0fa6166556b48b9bec4fa3403244, type: 3}
+  - {fileID: 3592875945412263818, guid: ccd6d77f2891807419299b434c776577, type: 3}
+  - {fileID: 4653467330774258441, guid: bd234294c37e5b34c81d3c0b63aff132, type: 3}
+  - {fileID: 1712184987221446656, guid: 926fbbeb47063fd498eea93be978b80e, type: 3}
   roadObstaclesOnRight:
-  - {fileID: 2268628182600521534, guid: 445120d555fad5d4f9e2c2d0decc7412, type: 3}
+  - {fileID: -3306111616641941175, guid: 1ccc043c05ae6424dbf6311cfb64ea40, type: 3}
+  - {fileID: 3523247673035350140, guid: 993d230fe4a017c49bc3086a86d6705f, type: 3}
+  - {fileID: 7676673028485685241, guid: acdf346bfa742ec4190015e1480d97c7, type: 3}
+  - {fileID: 6442080619498616697, guid: 5e488cfd825ce044395037d93a9d8eb6, type: 3}
+  - {fileID: 3462779924540916639, guid: 471247d5cf89b2c46bcde0f08524197e, type: 3}
+  - {fileID: 8032606658876298400, guid: 6412c6bdd410913469520a05a1632885, type: 3}
+  - {fileID: 1477977588715351066, guid: 236e70cfb8ad0fc448c79a2155a5d3c2, type: 3}
+  - {fileID: 3071276133163635248, guid: 841e8e4f1a54c754396b7559d1cc6fad, type: 3}
+  - {fileID: 2338119915174558348, guid: adad89669382b0743a2c2f162c9601b0, type: 3}
+  - {fileID: 6395885235427237417, guid: 48b470c6a762f60438c631f219257520, type: 3}
+  - {fileID: 7596151050144982664, guid: 5f6cbb0f4dd572e47ab1ee6c2a3a36d1, type: 3}
+  - {fileID: 1176913720603983637, guid: 498a13929c1393e44be1126bcadc448b, type: 3}
   housesOnLeft:
   - {fileID: 36973326564753824, guid: c6bceeada0df99147a1d9a7429ee3619, type: 3}
   - {fileID: 1775277873447025004, guid: 3a2915d68687f054b92df9f8b7a799cd, type: 3}
