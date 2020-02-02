@@ -18,8 +18,8 @@ RenderSettings:
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 50
-  m_LinearFogEnd: 80
+  m_LinearFogStart: 100
+  m_LinearFogEnd: 120
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -792,6 +792,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 35653263, guid: 0ef2f62f54d17294aaa1a8b19990a9dd, type: 3}
+      propertyPath: chanceToSpawnProp
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3419283471779919625, guid: 0ef2f62f54d17294aaa1a8b19990a9dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -924,7 +928,7 @@ PrefabInstance:
     - target: {fileID: 7738933981000823547, guid: 7726e5da42b1a0a4188a669dea2ec30d,
         type: 3}
       propertyPath: playerTurningRotationMaxValue
-      value: 135
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7726e5da42b1a0a4188a669dea2ec30d, type: 3}
