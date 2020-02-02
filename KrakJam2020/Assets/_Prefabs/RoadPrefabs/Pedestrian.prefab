@@ -171,14 +171,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d1aa4a712bab44db357105fbbd97b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: -10
+  score: 0
   particleEffectDuration: 2
   particleSystem: {fileID: 405754282581178340, guid: ee1b671ef57e72e46836b9b767891306,
     type: 3}
   heightOffset: 0
   highScore: {fileID: 0}
   healthPointsSystem: {fileID: 0}
-  floatingScoreSpawner: {fileID: 0}
   models:
   - {fileID: 153506, guid: 46046f4999ed889429c0ca851fcafdb6, type: 3}
   - {fileID: 128674, guid: 098b92ae790d95c46a1ff03bbf465bca, type: 3}
