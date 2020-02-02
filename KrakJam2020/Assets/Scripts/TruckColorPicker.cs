@@ -4,7 +4,6 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class TruckColorPicker : MonoBehaviour {
-    bool isPies = true;
     public enum TruckColor {
         Cyan,
         Red,
@@ -19,8 +18,12 @@ public class TruckColorPicker : MonoBehaviour {
         Debug.Log("Debil");
     }
 
-    void Awake() {
-        switch (color) {
+    void Awake(){
+        ChangeTruckColour();
+    }
+
+    private void ChangeTruckColour(){
+        switch (color){
             case TruckColor.Cyan:
                 gameObject.GetComponent<Renderer>().material = cyanMaterial;
                 break;
@@ -31,5 +34,9 @@ public class TruckColorPicker : MonoBehaviour {
                 gameObject.GetComponent<Renderer>().material = yellowMaterial;
                 break;
         }
+    }
+
+    public void ChangeColour(){
+        ChangeTruckColour();
     }
 }

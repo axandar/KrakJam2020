@@ -6,4 +6,5 @@
 	public const string HIGH_SCORE = "HighScore";
 	public const string CAMERA_TO_SHAKE = "CameraToShake";
 	public const string SPLASH_COLLIDER = "SplashCollider";
+	public const string TRUCK_COLOR_CHANGER = "TruckColorChanger";
 }
