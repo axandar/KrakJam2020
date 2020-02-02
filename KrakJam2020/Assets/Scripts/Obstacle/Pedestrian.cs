@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace Obstacle{
-	public class Pedestrian : RoadObstacle {
+	public class Pedestrian : MonoBehaviour {
 	
 		[SerializeField] List<GameObject> models;
 

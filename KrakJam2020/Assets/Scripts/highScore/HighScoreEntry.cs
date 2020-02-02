@@ -34,9 +34,14 @@ namespace highScore{
 			set => millisecondsOnPlayEnd = value;
 		}
 
-		public int TimePlayedInSeconds(){
+		public long TimePlayedInSeconds(){
+			var millisOfPlay = millisecondsOnPlayEnd - millisecondsOnPlayStart;
+			return millisOfPlay / 1000;
+		}
+		
+		public long TimePlayedInSecondsForGUI(){
 			var millisOfPlay = (DateTime.UtcNow - epochStart).TotalMilliseconds - millisecondsOnPlayStart;
-			return (int) (millisOfPlay / 1000);
+			return (long) (millisOfPlay / 1000);
 		}
 	}
 }

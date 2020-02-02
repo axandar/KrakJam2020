@@ -19,7 +19,7 @@ public class PlayerUiManager : MonoBehaviour{
 	}
 
 	public void UpdateTimeElapsedText() {
-		timeElapsedDisplayText.text = _highScore.HighScoreEntry.TimePlayedInSeconds().ToString();
+		timeElapsedDisplayText.text = _highScore.HighScoreEntry.TimePlayedInSecondsForGUI().ToString();
 	}
 
 	public void UpdatePointsDisplayText() {
