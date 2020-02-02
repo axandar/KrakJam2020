@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  particleEffectDuration: 0
+  particleEffectDuration: 2
   particleSystem: {fileID: 4937277308451044051, guid: 125b3ae7e9ceb6840b3c8b25379218fe,
     type: 3}
   heightOffset: 0
