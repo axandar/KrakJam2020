@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0af07b7240b4749a37c0a1be2209d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitchTo: {fileID: 102900000, guid: 44cc68394a8dde446a72cb895134641c, type: 3}
+  sceneSwitchTo: MainMenu
 --- !u!1001 &216626622
 PrefabInstance:
   m_ObjectHideFlags: 0

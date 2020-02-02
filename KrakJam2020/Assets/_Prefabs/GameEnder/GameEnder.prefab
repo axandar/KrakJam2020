@@ -58,4 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0af07b7240b4749a37c0a1be2209d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitchTo: {fileID: 102900000, guid: 8c0b9d5c2e7b81a4386c6e27e15333f7, type: 3}
+  sceneSwitchTo: EndScene

@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0af07b7240b4749a37c0a1be2209d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitchTo: {fileID: 102900000, guid: 69b285ed1ed1092489e66f9c4af65fac, type: 3}
+  sceneSwitchTo: HighScore
 --- !u!114 &319912342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0af07b7240b4749a37c0a1be2209d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitchTo: {fileID: 102900000, guid: 1c9733b172071bc4ba790bc0f276e6ba, type: 3}
+  sceneSwitchTo: PrototypeToRelease1
 --- !u!1 &1385495053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0af07b7240b4749a37c0a1be2209d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitchTo: {fileID: 0}
+  sceneSwitchTo: 
 --- !u!114 &1736606633
 MonoBehaviour:
   m_ObjectHideFlags: 0
