@@ -9,15 +9,16 @@ public class ColorChange : MonoBehaviour{
         _truckColorPicker = GameObject.FindGameObjectWithTag(Tags.TRUCK_COLOR_CHANGER).GetComponent<TruckColorPicker>();
     }
 
-    public void ChangeTruckColor(int value){
-        switch (value){
-            case 0: _truckColorPicker.color = TruckColorPicker.TruckColor.Cyan;
-                break;
-            case 1: _truckColorPicker.color = TruckColorPicker.TruckColor.Red;
-                break;
-            case 2: _truckColorPicker.color = TruckColorPicker.TruckColor.Yellow;
-                break;
-        }
+    public void PickedCyanColour(){
+        _truckColorPicker.color = TruckColorPicker.TruckColor.Cyan;
+        _truckColorPicker.ChangeColour();
+    }
+    public void PickedRedColour(){
+        _truckColorPicker.color = TruckColorPicker.TruckColor.Red;
+        _truckColorPicker.ChangeColour();
+    }
+    public void PickedYellowColour(){
+        _truckColorPicker.color = TruckColorPicker.TruckColor.Yellow;
         _truckColorPicker.ChangeColour();
     }
 }
