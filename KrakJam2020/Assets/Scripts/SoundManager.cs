@@ -5,7 +5,6 @@ public class SoundManager : MonoBehaviour{
 	private static bool _created;
 
 	private void Awake(){
-		Debug.Log("Awake");
 		if(!_created){
 			DontDestroyOnLoad(gameObject);
 			_created = true;
