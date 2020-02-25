@@ -9,6 +9,8 @@ TagManager:
   - HighScore
   - CameraToShake
   - TruckColorChanger
+  - SoundManager
+  - UISoundManager
   layers:
   - Default
   - TransparentFX

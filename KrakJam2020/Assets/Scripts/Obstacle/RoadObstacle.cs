@@ -7,21 +7,22 @@ using highScore;
 using UnityEngine;
 
 namespace Obstacle{
-	[RequireComponent(typeof(Rigidbody), typeof(BoxCollider), 
-		typeof(AudioSource))]
+	[RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
 	public class RoadObstacle : MonoBehaviour {
 		[SerializeField] int score;
 		[SerializeField] float particleEffectDuration;
 		[SerializeField] ParticleSystem particleSystem;
+		[SerializeField] AudioClip audioClip;
 		public float heightOffset;
 		public HighScore highScore;
 		public HealthPointsSystem healthPointsSystem;
 		public FloatingScoreSpawner floatingScoreSpawner;
 
-		AudioSource _audioSource;
-
+		private SoundManager _soundManager;
+		
 		void Start(){
-			_audioSource = GetComponent<AudioSource>();
+			var obj = GameObject.FindWithTag(Tags.SOUND_MANAGER);
+			_soundManager = obj.GetComponent<SoundManager>();
 		}
 
 		void OnTriggerEnter(Collider other){
@@ -35,7 +36,7 @@ namespace Obstacle{
 			highScore.AddScore(score);
 			healthPointsSystem.DecreaseHealth();
 			floatingScoreSpawner.SpawnFloatingPointsAmount(score,transform.position);
-			_audioSource.Play();
+			_soundManager.PlaySfx(audioClip);
 
 			if(particleSystem != null){
 				var localParticleSystem = Instantiate(particleSystem, transform);
